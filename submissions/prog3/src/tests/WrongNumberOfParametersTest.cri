@@ -1,0 +1,10 @@
+WrongNumberOfParametersTest
+ifenemy 0 4
+ifally 0 
+ifangle 0 0 4
+hop
+left
+go 1
+
+Checks if error statement is printed when a command line has an 
+unexpected number of parameters.

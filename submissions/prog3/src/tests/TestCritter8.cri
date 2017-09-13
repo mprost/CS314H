@@ -1,0 +1,11 @@
+TestCritter8
+write r1 0
+write r2 3
+inc r1
+iflt r1 r2 7
+dec r1
+dec r1
+eat
+go 3
+
+This shows that the increment and decrement commands work.

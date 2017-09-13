@@ -1,0 +1,12 @@
+ValidRegisterTest1
+ifenemy 0 4
+ifally 0 5
+ifangle 0 0 4
+hop
+add r1 r2
+write 45 4
+left
+go 1
+
+Checks if error statement is printed when mutator methods with one
+register parameter use an invalid register.

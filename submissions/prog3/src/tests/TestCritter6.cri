@@ -1,0 +1,10 @@
+TestCritter5
+eat
+infect 
+left
+ifwall 0 6
+right
+go 1
+
+This shows that the conditional methods with two parameters work 
+correctly.

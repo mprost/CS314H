@@ -1,0 +1,8 @@
+TestCritter5
+write r3 2
+right
+left
+infect
+go r3
+
+This shows that the register values are properly processed and accessed.

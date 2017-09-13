@@ -1,0 +1,40 @@
+Bhatta
+ifenemy 0 17
+ifenemy 45 19
+ifenemy 90 20
+ifenemy 135 21
+ifenemy 180 22
+ifenemy 225 23
+ifenemy 270 24
+ifenemy 315 25
+ifempty 0 15
+ifrandom 13
+left
+go 1
+right
+go 1
+hop
+go 1
+infect
+go 1
+ifangle 45 45 26
+ifangle 90 90 26
+ifangle 135 135 26
+ifangle 180 180 26
+ifangle 225 225 29
+ifangle 270 270 29
+ifangle 315 315 29
+ifempty 0 15
+right
+go 1
+ifempty 0 15
+left
+go 1
+go 10
+
+This critter hops in a straight line until it ends up next to an enemy.
+If the enemy is in front, then it infects it, if it is not, and the enemy is
+facing it, it turns towards the enemy, so that it has less of a chance of
+infecting an ally after it is infected. This makes it take a while to kill the
+last few critters on the map because it has a tendency to avoid the enemies if 
+possible. 

@@ -1,0 +1,8 @@
+TestCritter4
+hop
+go +2
+right
+left
+go 1
+
+This shows that the positive relative jumps work as intended.

@@ -1,0 +1,173 @@
+<TITLE>New serial cables [rec.humor.funny]</TITLE>
+<style type="text/css" media="Screen">
+a {
+ text-decoration: none;
+ }
+a:hover {
+ color: darkred;
+ }
+</style>
+<HTML>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#0000EE" VLINK="#551A8B">
+
+<!-- start "/include/rhf/top.ofi" -->
+<MAP NAME="joke-header-map">
+<AREA SHAPE="rect" COORDS="103,52,194,71" HREF="../../best.html" ALT="Best of Jokes">
+<AREA SHAPE="rect" COORDS="205,52,299,71" HREF="../../current.html" ALT="Current Jokes">
+<AREA SHAPE="rect" COORDS="309,52,399,71" HREF="../../index.html" ALT="RHF Home">
+<AREA SHAPE="rect" COORDS="410,52,479,71" HREF="../../search.html" ALT="Search">
+<AREA SHAPE="rect" COORDS="489,52,560,71" HREF="../../sponsor.html" ALT="Sponsor RHF?">
+</MAP>
+<CENTER>
+
+<A HREF="../../images/joke-header.html"><IMG SRC="../../images/joke-header.gif" ALT="Fun Stuff &amp; Jokes" WIDTH="560" HEIGHT="74" ISMAP USEMAP="#joke-header-map" VSPACE="8" BORDER="0"></A><BR>
+</CENTER>
+<P>
+<!-- end "/include/rhf/top.ofi" -->
+<CENTER><A HREF="hubby9.html"><IMG SRC="../../images/previous.gif" ALT=Previous WIDTH=76 HEIGHT=11 BORDER=0> |</A> RHF Joke Archives <A HREF="nopeststrip.html">| <IMG SRC="../../images/next.gif" ALT=Next WIDTH=76 HEIGHT=11 BORDER=0></A></CENTER><CENTER>
+<H1><FONT FACE="helvetica, ariel" COLOR="#CE0000">New serial cables</FONT></H1>
+<ADDRESS><a href="mailto:rupa@f-454.fidonet.org">rupa@f-454.fidonet.org</a> (Rupa Schomaker)<BR>
+</ADDRESS>
+<FONT SIZE=-1>(chuckle, computers)<BR></FONT></FONT></CENTER><P>
+<PRE>I reveiced this from Crazy J on fidonet node 1:3600/7:  (attempts to contact
+the author at CServe have been futile)
+
+Non-techno-jocks stop reading now.
+
+                      DL-232 -- A New Standard
+
+                           by Dave Lyons
+        (CompuCenter Iowa: JoeApple; CompuServe 72177,3233)
+
+     I may never understand how the designers of the RS-232 "standard"
+for serial communication managed to use 25 wires where only 3 are really
+necessary.  Maybe they made a deal with the companies that make cables,
+connectors, and switch boxes...I just don't know.
+
+     Well, I thought of a few things that the RS-232 standard lacks, and
+since there are already so many extra signals, a few more can't hurt
+anybody, right?  Heck, let's go for 50-pin connectors and cables and add
+the following new signals.  (Just to make sure this isn't compatible
+with any old equipment, all OLD signals are moved up one pin number
+(Carrier Detect becomes 9 instead of 8, etc., and pin 25 goes to pin 1).
+
+
+ Pin  Name      Description
+ ---  ----      -----------
+  26  XCAT      Should be connected to chassis of devices.  Used with
+                the next two signals, this provides protection against
+                cats who haven't learned not to walk on floppy disks or
+                serial equipment.  This signal should supply about 2000
+                volts (at a VERY low current level; wouldn't want to
+                HURT the cute little thing, just teach it not to walk on
+                anything in the computer room).
+
+  27  CATGND    Cat ground.  Used with pin 26.  This signal should be
+                connected to another part of the chassis or the
+                tabletop.
+
+  28  CTD       Cat detect.
+
+  29  SD        Self-destruct.  This signals causes the device to
+                destroy itself.
+
+  30  SDACK     Self-destruct acknowledge.  Acknowledges that the device
+                has destroyed itself.
+
+  31  VADIC     This signal indicates to a computer that the device on
+                the other end is a modem that uses VADIC protocol.
+                (Note:  CompuCenter Iowa users should jumper this signal
+                to SD and then buy a decent modem.)
+
+  32  STBIT1    Stutter bits.  With pin 33, sets the number of "stutter
+                bits" (0 to 3 of them) to be included before each byte
+                transmitted. This may reduce the number of people who
+                feel inferior to computer equipment by showing them that
+                computers have problems communicating with each other.
+  33  STBIT2
+
+  34  CABR      Cable ready.  It's not enough to know that the Data Set
+                is ready (DSR) and the Data Terminal is read (DTR).  We
+                also need to know that the CABLE connecting them is
+                ready.
+
+  35  GRR       Gremlins ready.  Not everybody knows it, but there are
+                little green guys inside most modern computer equipment.
+                Most of the time they sleep, but other times they cause
+                trouble.  The next 6 signals are for dealing with gremlins.
+
+  36  220A      Used with pin 37, supplies 220 volt power for the
+                gremlins' air conditioning.  On hot days when gremlins
+                can't sleep, applying power to these pins may solve your
+                problems.
+  37  220B
+
+  38  110H      110 volts, hot side.  When the 220 volt power doesn't
+                help and gremlin problems persist, use this with pin 39
+                to supply 110 volts for the gremlins' TV and video game
+                center.
+
+  39  110N      110 volts, neutral side.
+
+  40  MOON      Indicates the phase of the moon. Sometimes solves
+                mysterious problems.
+
+  41  LHI       Pins 41 through 45 can be used to implement the "like"
+                protocol when the normal RTS/CTS protocol isn't enough.
+                This one means "Like HI" and is used to establish a
+                connection.
+
+  42  LHTY2     Like HI to You Too.  Acknowledges pin 41.
+
+  43  LLTT      Like Listen To This.  Requests permission to send data.
+
+  44  LOK       Like OK.  Grants permission to transmit data.
+
+  45  LWOW      Like WOW.  Acknowledges receipt of data.
+
+  46  HEY       Pins 46 to 50 may be used to implement the "Eighties"
+                protocol when RTS/CTS and "Like" protocols won't do the
+                job.  This signal is similar to RTS (Request to Send).
+
+  47  NP        No Problem.  Acknowledges HEY.
+
+  48  HUH?      Signals that data was not received correctly
+                (possibly wrong number of stutter bits).
+
+  49  YEAH      Acknowledges data received.
+
+  50  KMG365    Like YEAH, but for avid Emergency One fans.
+
+That makes 50!  Let's hear your suggestions for MORE serial signals.
+Maybe we can get 100 and REALLY make the cable manufacturers happy.
+
+</PRE><center><font color=darkgreen><P>(From the "Rest" of RHF)</P></font></center><CENTER><A HREF="hubby9.html"><IMG SRC="../../images/previous.gif" ALT=Previous WIDTH=76 HEIGHT=11 BORDER=0> |</A> RHF Joke Archives <A HREF="nopeststrip.html">| <IMG SRC="../../images/next.gif" ALT=Next WIDTH=76 HEIGHT=11 BORDER=0></A></CENTER>
+<!-- start "/include/rhf/joke-tmpl-footer.ofi" -->
+<BR>
+<CENTER>
+<A HREF="../../past.html">Best of Jokes</A> | 
+<A HREF="../../current.html">Current Jokes</a> | 
+<A HREF="../../index.html">RHF Home</A> |  
+<A HREF="../../search.html">Search</A>
+</FONT>
+<P>
+
+<!-- end "/include/rhf/joke-tmpl-footer.ofi" --></CENTER>
+<P align=center><script type="text/javascript"><!--
+google_ad_client = "pub-5397334057241462";
+google_alternate_ad_url = "../../../../www.templetons.com/brad/effread.gif";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_channel ="6875879912";
+//--></script>
+<script type="text/javascript"
+  src="../../../../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</p>
+
+
+</BODY>
+
+<!-- Mirrored from www.netfunny.com/rhf/jokes/93q1/newrs232.html by HTTrack Website Copier/3.x [XR&CO'2003], Tue, 16 Nov 2004 00:19:46 GMT -->
+</HTML>

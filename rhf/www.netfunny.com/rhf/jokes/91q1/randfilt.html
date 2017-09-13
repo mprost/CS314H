@@ -1,0 +1,128 @@
+<TITLE>Random Filter [rec.humor.funny]</TITLE>
+<style type="text/css" media="Screen">
+a {
+ text-decoration: none;
+ }
+a:hover {
+ color: darkred;
+ }
+</style>
+<HTML>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#0000EE" VLINK="#551A8B">
+
+<!-- start "/include/rhf/top.ofi" -->
+<MAP NAME="joke-header-map">
+<AREA SHAPE="rect" COORDS="103,52,194,71" HREF="../../best.html" ALT="Best of Jokes">
+<AREA SHAPE="rect" COORDS="205,52,299,71" HREF="../../current.html" ALT="Current Jokes">
+<AREA SHAPE="rect" COORDS="309,52,399,71" HREF="../../index.html" ALT="RHF Home">
+<AREA SHAPE="rect" COORDS="410,52,479,71" HREF="../../search.html" ALT="Search">
+<AREA SHAPE="rect" COORDS="489,52,560,71" HREF="../../sponsor.html" ALT="Sponsor RHF?">
+</MAP>
+<CENTER>
+
+<A HREF="../../images/joke-header.html"><IMG SRC="../../images/joke-header.gif" ALT="Fun Stuff &amp; Jokes" WIDTH="560" HEIGHT="74" ISMAP USEMAP="#joke-header-map" VSPACE="8" BORDER="0"></A><BR>
+</CENTER>
+<P>
+<!-- end "/include/rhf/top.ofi" -->
+<CENTER><A HREF="prodwarn.html"><IMG SRC="../../images/previous.gif" ALT=Previous WIDTH=76 HEIGHT=11 BORDER=0> |</A> Browse the Best of RHF: "<A HREF="../computer.html">Computer, Science and Math Jokes</A>" <A HREF="ritchie.html">| <IMG SRC="../../images/next.gif" ALT=Next WIDTH=76 HEIGHT=11 BORDER=0></A></CENTER><CENTER>
+<H1><FONT FACE="helvetica, ariel" COLOR="#CE0000">Random Filter</FONT></H1>
+<ADDRESS><a href="mailto:Ken_Blackman.INTEGRATION@gateway.qm.apple.com">Ken_Blackman.INTEGRATION@gateway.qm.apple.com</a> (Ken Blackman)<BR>
+Apple Computer, Inc.<BR>
+</ADDRESS>
+<FONT SIZE=-1>(computer, original, chuckle)<BR></FONT></FONT></CENTER><P>
+<HTML>
+Could someone please help me out.   I'm not a math wiz, but I think I've 
+stumbled onto something important, and it looks like it could have some 
+profound implications for a number of fields. 
+<P>
+I call it a Random Filter.   The opposite of a random number generator, 
+this algorithm takes a stream of numbers and removes the random ones, thus 
+leaving a collection of purely non-random numbers.  Here's the simple 
+version;  where the function rand() represents your favorite random number 
+generator: 
+<P>
+<!--  m-->
+<PRE>loop 
+   n &lt;- input              # get next n 
+   r &lt;- rand()             # also get a random number 
+   n = r ?                 # is n itself a random number ?  
+      yes: trash &lt;- n      # then toss it 
+      no: output &lt;- n      # otherwise keep it 
+end loop 
+</PRE>
+<P>
+</PRE>In other words, the randomness of each n is determined by comparing it to 
+a number known to be random;  all random n's are filtered out.   It's just 
+like that technique of finding prime numbers by eliminating all the 
+composites.   For example, this could be handy for scientific researchers: 
+now they can weed out any random fluctuations in their statistical data. 
+Astronomers can get sharper pictures.   Physicists can finally get past 
+that whole Heisenberg thing. 
+<P>
+Obviously this technique hinges on having a good reliable source of 
+randomness to use for comparison.   Using a computer-based rand() in the 
+loop above will only produce PSEUDO-non-random output. 
+<P>
+Before you tell me what you think of all this (cough cough), let me assure 
+you that I have already used it, with fabulously successful results. 
+Before sending this note, I took the ASCII text and merged it with a file 
+of Geiger readings from some radioactive isotope.  Then, using the same 
+geiger recording as my rand() function (since it was, after all, still 
+random), I pumped the altered text through a Random Filter and, voila, out 
+came the original!   Pretty amazing, huh? 
+<P>
+I can only speculate as to what would happen if I'd had some mechanical 
+dice roller feeding its results to the computer in real time.   With that 
+degree of randomness at its disposal, the Filter may have corrected my 
+spelling, cleaned up my grammar, or removed some other imperfections I'm 
+not aware of.   No telling how powerful this technique could be. 
+<P>
+Think of what this could mean for areas like data integrity, quantum 
+physics, radio reception, compiler design, weather forecasting, economics, 
+structural design, how about racetrack handicapping... the applications 
+seem virtually limitless. 
+<P>
+Well, waddya think?   One thing's for sure--I'm planning a trip to Las 
+Vegas.   Soon as I can figure out how to use the slot machines to beat the 
+roulette wheel. 
+<P>
+<HR>
+<P>
+Late-breaking news:  The Random Filter has continued to demonstrate its 
+value.   I applied it to a list of the last six months' winning lottery 
+numbers.   I tried every method and variation I could think of, and the 
+results were absolute gobbledy-gook:  the Random Filter concept simply 
+could not be meaningfully applied to this set of data.   In other words, I 
+proved conclusively that the lottery is <B>FIXED</B> (ie, not random). 
+Pretty amazing, huh? 
+<P>
+<CENTER><A HREF="prodwarn.html"><IMG SRC="../../images/previous.gif" ALT=Previous WIDTH=76 HEIGHT=11 BORDER=0> |</A> Browse the Best of RHF: "<A HREF="../computer.html">Computer, Science and Math Jokes</A>" <A HREF="ritchie.html">| <IMG SRC="../../images/next.gif" ALT=Next WIDTH=76 HEIGHT=11 BORDER=0></A></CENTER>
+<!-- start "/include/rhf/joke-tmpl-footer.ofi" -->
+<BR>
+<CENTER>
+<A HREF="../../past.html">Best of Jokes</A> | 
+<A HREF="../../current.html">Current Jokes</a> | 
+<A HREF="../../index.html">RHF Home</A> |  
+<A HREF="../../search.html">Search</A>
+</FONT>
+<P>
+
+<!-- end "/include/rhf/joke-tmpl-footer.ofi" --></CENTER>
+<P align=center><script type="text/javascript"><!--
+google_ad_client = "pub-5397334057241462";
+google_alternate_ad_url = "../../../../www.templetons.com/brad/effread.gif";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_channel ="6875879912";
+//--></script>
+<script type="text/javascript"
+  src="../../../../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</p>
+
+
+</BODY>
+
+<!-- Mirrored from www.netfunny.com/rhf/jokes/91q1/randfilt.html by HTTrack Website Copier/3.x [XR&CO'2003], Tue, 16 Nov 2004 00:33:41 GMT -->
+</HTML>

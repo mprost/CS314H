@@ -1,0 +1,88 @@
+<TITLE>Data transmission 101 [rec.humor.funny]</TITLE>
+<style type="text/css" media="Screen">
+a {
+ text-decoration: none;
+ }
+a:hover {
+ color: darkred;
+ }
+</style>
+<HTML>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#0000EE" VLINK="#551A8B">
+
+<!-- start "/include/rhf/top.ofi" -->
+<MAP NAME="joke-header-map">
+<AREA SHAPE="rect" COORDS="103,52,194,71" HREF="../../best.html" ALT="Best of Jokes">
+<AREA SHAPE="rect" COORDS="205,52,299,71" HREF="../../current.html" ALT="Current Jokes">
+<AREA SHAPE="rect" COORDS="309,52,399,71" HREF="../../index.html" ALT="RHF Home">
+<AREA SHAPE="rect" COORDS="410,52,479,71" HREF="../../search.html" ALT="Search">
+<AREA SHAPE="rect" COORDS="489,52,560,71" HREF="../../sponsor.html" ALT="Sponsor RHF?">
+</MAP>
+<CENTER>
+
+<A HREF="../../images/joke-header.html"><IMG SRC="../../images/joke-header.gif" ALT="Fun Stuff &amp; Jokes" WIDTH="560" HEIGHT="74" ISMAP USEMAP="#joke-header-map" VSPACE="8" BORDER="0"></A><BR>
+</CENTER>
+<P>
+<!-- end "/include/rhf/top.ofi" -->
+<CENTER><A HREF="terrorist.html"><IMG SRC="../../images/previous.gif" ALT=Previous WIDTH=76 HEIGHT=11 BORDER=0> |</A> RHF Joke Archives <A HREF="clyde.html">| <IMG SRC="../../images/next.gif" ALT=Next WIDTH=76 HEIGHT=11 BORDER=0></A></CENTER><CENTER>
+<H1><FONT FACE="helvetica, ariel" COLOR="#CE0000">Data transmission 101</FONT></H1>
+<ADDRESS><a href="mailto:daveb%kernel.austin.ibm.com@tkg.com">daveb%kernel.austin.ibm.com@tkg.com</a> (Dave Burton)<BR>
+</ADDRESS>
+<FONT SIZE=-1>(chuckle, computers)<BR></FONT></FONT></CENTER><P>
+<PRE>
+I received a Problem Management Report some time back describing a
+performance problem on a certain large bureaucracy's - er - company's -
+networking hardware.  Unfortunately, it was not considered politic to
+explain this problem with the real answer, and the customer had to be
+mollified with a patch.  But the truth deserves to be known!
+
+Problem Report:
+  DESC: Customer describes a problem where they have a server/client
+  application passing packets across the [FDDI] network.  If they initialize
+  the contents of the packets to zeroes, they see "5 to 10 times" less
+  performance than if they initialize the packet contents to a non-zero
+  value.
+
+Censored Answer:
+  Statistical analysis has determined that there are more 1 bits than 0
+  bits in data.  A bit of logic shows that this result must hold, because
+  0 represents an absence of data, and 1 encodes its presence.  Thus,
+  data has more 1's than 0's, QED.  Therefore, to optimize throughput,
+  the hardware negates all the bits to produce <i>less</i> 1's and more 0's.
+  Since there is less data to transmit, the throughput increases.  The
+  receiver simply re-negates the incoming bits and thus recovers the
+  actual data sent.  The slowdown you experience is simply because all
+  those 0's are transmitted by the hardware as 1's (data), and we have
+  already shown that transmitting data requires more time than
+  transmitting nothing.
+
+</PRE><center><font color=darkgreen><P>(From the "Rest" of RHF)</P></font></center><CENTER><A HREF="terrorist.html"><IMG SRC="../../images/previous.gif" ALT=Previous WIDTH=76 HEIGHT=11 BORDER=0> |</A> RHF Joke Archives <A HREF="clyde.html">| <IMG SRC="../../images/next.gif" ALT=Next WIDTH=76 HEIGHT=11 BORDER=0></A></CENTER>
+<!-- start "/include/rhf/joke-tmpl-footer.ofi" -->
+<BR>
+<CENTER>
+<A HREF="../../past.html">Best of Jokes</A> | 
+<A HREF="../../current.html">Current Jokes</a> | 
+<A HREF="../../index.html">RHF Home</A> |  
+<A HREF="../../search.html">Search</A>
+</FONT>
+<P>
+
+<!-- end "/include/rhf/joke-tmpl-footer.ofi" --></CENTER>
+<P align=center><script type="text/javascript"><!--
+google_ad_client = "pub-5397334057241462";
+google_alternate_ad_url = "../../../../www.templetons.com/brad/effread.gif";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_channel ="6875879912";
+//--></script>
+<script type="text/javascript"
+  src="../../../../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</p>
+
+
+</BODY>
+
+<!-- Mirrored from www.netfunny.com/rhf/jokes/95q3/bits.html by HTTrack Website Copier/3.x [XR&CO'2003], Tue, 16 Nov 2004 00:26:18 GMT -->
+</HTML>

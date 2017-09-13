@@ -1,0 +1,161 @@
+<TITLE>Date(6) get or set a date [rec.humor.funny]</TITLE>
+<style type="text/css" media="Screen">
+a {
+ text-decoration: none;
+ }
+a:hover {
+ color: darkred;
+ }
+</style>
+<HTML>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#0000EE" VLINK="#551A8B">
+
+<!-- start "/include/rhf/top.ofi" -->
+<MAP NAME="joke-header-map">
+<AREA SHAPE="rect" COORDS="103,52,194,71" HREF="../../best.html" ALT="Best of Jokes">
+<AREA SHAPE="rect" COORDS="205,52,299,71" HREF="../../current.html" ALT="Current Jokes">
+<AREA SHAPE="rect" COORDS="309,52,399,71" HREF="../../index.html" ALT="RHF Home">
+<AREA SHAPE="rect" COORDS="410,52,479,71" HREF="../../search.html" ALT="Search">
+<AREA SHAPE="rect" COORDS="489,52,560,71" HREF="../../sponsor.html" ALT="Sponsor RHF?">
+</MAP>
+<CENTER>
+
+<A HREF="../../images/joke-header.html"><IMG SRC="../../images/joke-header.gif" ALT="Fun Stuff &amp; Jokes" WIDTH="560" HEIGHT="74" ISMAP USEMAP="#joke-header-map" VSPACE="8" BORDER="0"></A><BR>
+</CENTER>
+<P>
+<!-- end "/include/rhf/top.ofi" -->
+<CENTER><A HREF="dadpen.html"><IMG SRC="../../images/previous.gif" ALT=Previous WIDTH=76 HEIGHT=11 BORDER=0> |</A> RHF Joke Archives <A HREF="datelist.html">| <IMG SRC="../../images/next.gif" ALT=Next WIDTH=76 HEIGHT=11 BORDER=0></A></CENTER><CENTER>
+<H1><FONT FACE="helvetica, ariel" COLOR="#CE0000">Date(6) get or set a date</FONT></H1>
+<ADDRESS><a href="mailto:overby@sendit.nodak.edu">overby@sendit.nodak.edu</a> (Glen Overby)<BR>
+</ADDRESS>
+<FONT SIZE=-1>(original, computer, maybe)<BR></FONT></FONT></CENTER><P>
+<PRE>(I wrote this, but the idea came from a friend)
+
+.TH DATE 6 "January 1, 1992"
+.UC 4
+.SH NAME
+date \- get and print a date
+.SH SYNOPSIS
+.B date
+.RB "[ -s ] [ -local ] [ -k ] option=value"
+.SH DESCRIPTION
+If no arguments are given, a date will be selected at random.
+Providing an argument will restrict the search pool of dates.
+Hopefully these arguments will not carry forward into the actual date.
+Only the superuser can select dates by name.
+.PP
+The \-s option registers you in the date database and (if not local) posts
+your vitals to alt.personals (and, optionally, alt.sex.wanted).
+.PP
+Using the \-k option selects a date, but does not make any further arrangments.
+.PP
+Ranges are specified with parentheses and brackets: (18,25) is 18 to 25
+exclusive while [18,25] is 18 to 25 inclusive.
+An array of selections is given with braces such as {blonde, burunette, redhead}.
+Multiple responses are separated with commans, sex=female,yes,please
+.IP -blind
+To arrange a blind date.
+.IP "view [ \fImust\fR ]"
+View prospective date's picture.
+To locate a picture,
+.I date
+searches several picture databases, including
+FaceSaver (uunet.uu.net)
+alt.sec.pictures, alt.binaries.pictures.erotica,
+and several FTP gif archives.
+You must have access to the Internet for FTP to work.
+.IP
+If view=must is set, and
+.I date
+is unable to find a picture, a request will be automaticly posted to
+alt.binaries.pictures.d asking for one.
+.IP
+Options to xv(1) may follow "view" or be put in the environment parameter XV
+.PP
+The following options restrict the  search pool to those who have supplied
+the necessary information.
+.IP "dim \fIrange,range,range\fR"
+.IP "height \fIrange\fR"
+Synonyms are also supported: midget, twerp, short, beanstalk, giant, basketball-player
+.IP "weight \fIrange\fR"
+Synonyms: toothpic, feather, wide-load, blimp
+.IP "age \fIrange\fR"
+Synonyms: juvenile, underage, thirty-nine, over-the-hill, {mom, dad}, {grandma, grandpa}
+.IP "sex {\fImale\fR, \fIfemale\fR} [,{\fIyes, no, maybe\fR} ] [,opt=\fIsex(6) options\fR ]"
+If sex=yes and you are registering, your vitals are posted to alt.sex.wanted
+in addition to alt.personals.
+.IP "race {\fIwhite, black, native-american, ...\fR}"
+Various slang terms are also supported.
+.IP "marriage {\fIflirting, noway, maybe, once, twice, several\fR }"
+Seriousness and experience.
+.IP "kids {\fInever, rightaway, oops, have, want\fR}"
+[, {\fIone, two, three, four, bunch\fR }"]
+.br
+Domestic leanings.
+.IP "cooking {\fInever, loveit, when_hungry\fR }"
+.IP color
+Synonym for race.
+.IP "religion {\fIAtheist, Moslem, Lutheran, Catholic, ... \fR}"
+.IP "temper {\fImellow, quiet, hot-head\fR}
+.IP "interests { \fIlists of possible interestes\fR }"
+.IP "name \fIlastname, firstname\fR"
+Specify name of your date.
+Perfect for hitting on
+Names can only be specified by super-user.
+.SH FILES
+.IP "$HOME/.daterc"
+Optional place to store options, for frequent daters.
+.IP "$HOME/.datehist"
+History of dates, to avoid duplication.
+.IP "$HOME/.persona"
+Options describing yourself, if you haven't registered in the database.
+Note that the first time you use
+.I date
+and supply this information, you are registered in the blind-date database.
+.SH SEE ALSO
+man(1), woman(1), sex(6)
+.PP
+\fIRFC1036: Standard for exchange of USENET messages\fP,
+M. Horton and R. Adams.
+.PP
+\fIA Primer on how to work with the USENET community\fR,
+Chuq Von Rospach and Gene "net.god" Spafford.
+.SH DIAGNOSTICS
+Exit status is 0 on success, 1 on complete failure to get a date.
+.PP
+`You are not superuser: date not set' if you try to use the name parameter
+but are not the super-user.
+.PP
+`Vitals posted to alt.personals [,alt.sex.wanted]' when you register globally.
+.SH AUTHOR
+Won't admit to it!
+</PRE><center><font color=darkgreen><P>(From the "Rest" of RHF)</P></font></center><CENTER><A HREF="dadpen.html"><IMG SRC="../../images/previous.gif" ALT=Previous WIDTH=76 HEIGHT=11 BORDER=0> |</A> RHF Joke Archives <A HREF="datelist.html">| <IMG SRC="../../images/next.gif" ALT=Next WIDTH=76 HEIGHT=11 BORDER=0></A></CENTER>
+<!-- start "/include/rhf/joke-tmpl-footer.ofi" -->
+<BR>
+<CENTER>
+<A HREF="../../past.html">Best of Jokes</A> | 
+<A HREF="../../current.html">Current Jokes</a> | 
+<A HREF="../../index.html">RHF Home</A> |  
+<A HREF="../../search.html">Search</A>
+</FONT>
+<P>
+
+<!-- end "/include/rhf/joke-tmpl-footer.ofi" --></CENTER>
+<P align=center><script type="text/javascript"><!--
+google_ad_client = "pub-5397334057241462";
+google_alternate_ad_url = "../../../../www.templetons.com/brad/effread.gif";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_channel ="6875879912";
+//--></script>
+<script type="text/javascript"
+  src="../../../../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</p>
+
+
+</BODY>
+
+<!-- Mirrored from www.netfunny.com/rhf/jokes/92q1/datecom.html by HTTrack Website Copier/3.x [XR&CO'2003], Tue, 16 Nov 2004 00:15:01 GMT -->
+</HTML>

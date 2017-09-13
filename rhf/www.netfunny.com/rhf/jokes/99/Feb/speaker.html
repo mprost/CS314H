@@ -1,0 +1,148 @@
+<TITLE>How to disable the modem speaker [rec.humor.funny]</TITLE>
+<style type="text/css" media="Screen">
+a {
+ text-decoration: none;
+ }
+a:hover {
+ color: darkred;
+ }
+</style>
+<HTML>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#0000EE" VLINK="#551A8B">
+
+<!-- start "/include/rhf/top.ofi" -->
+<MAP NAME="joke-header-map">
+<AREA SHAPE="rect" COORDS="103,52,194,71" HREF="../../../best.html" ALT="Best of Jokes">
+<AREA SHAPE="rect" COORDS="205,52,299,71" HREF="../../../current.html" ALT="Current Jokes">
+<AREA SHAPE="rect" COORDS="309,52,399,71" HREF="../../../index.html" ALT="RHF Home">
+<AREA SHAPE="rect" COORDS="410,52,479,71" HREF="../../../search.html" ALT="Search">
+<AREA SHAPE="rect" COORDS="489,52,560,71" HREF="../../../sponsor.html" ALT="Sponsor RHF?">
+</MAP>
+<CENTER>
+
+<A HREF="../../../images/joke-header.html"><IMG SRC="../../../images/joke-header.gif" ALT="Fun Stuff &amp; Jokes" WIDTH="560" HEIGHT="74" ISMAP USEMAP="#joke-header-map" VSPACE="8" BORDER="0"></A><BR>
+</CENTER>
+<P>
+<!-- end "/include/rhf/top.ofi" -->
+<CENTER><A HREF="choice.html"><IMG SRC="../../../images/previous.gif" ALT=Previous WIDTH=76 HEIGHT=11 BORDER=0> |</A> RHF Joke Archives <A HREF="eucalyptus.html">| <IMG SRC="../../../images/next.gif" ALT=Next WIDTH=76 HEIGHT=11 BORDER=0></A></CENTER><table align=right><tr><td width=175 height=630 valign=center align=right>
+<script type="text/javascript"><!--
+google_ad_client = "pub-5397334057241462";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_channel ="6875879912";
+//--></script>
+<script type="text/javascript"
+  src="../../../../../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</td></tr></table>
+<CENTER>
+<H1><FONT FACE="helvetica, ariel" COLOR="#CE0000">How to disable the modem speaker</FONT></H1>
+<ADDRESS><a href="mailto:jeffl@comix.santa-cruz.ca.us">jeffl@comix.santa-cruz.ca.us</a> (Jeff Liebermann)<BR>
+</ADDRESS>
+<FONT SIZE=-1>(chuckle, computers)<BR></FONT></FONT></CENTER><P>
+<HTML>
+<P>
+<BR>As posted to comp.unix.sco.misc.<BR>
+On Tue, 27 Oct 1998 12:31:55 GMT, Tom Parsons &lt;cis@tegan.com&gt; wrote:<BR>
+&gt;Mark Alliban enscribed:<BR>
+&gt;| How can I disable the modem whirring when a client dials in to OSR5? My<BR>
+&gt;| computer is rack-mounted and will be placed in Telehouse so it should<BR>
+&gt;| attract as little attebtion as possible to avoid being used as a coffee<BR>
+&gt;| stand/pen holder.<BR>
+<P>
+&gt;Preferred:  Read the modem manual, find the codes to turn off the<BR>
+&gt;  speaker and set them in the modem's NVRAM.<BR>
+&gt;<BR>
+&gt;Alternate:  Rip all of the pages out of the manual and wrap them<BR>
+&gt;  around the modem.<BR>
+<P>
+Unix Solution:<BR>
+cu -l /dev/ttyXX -s 38400 dir<BR>
+ATZ	(soft reset to NV settings)<BR>
+OK<BR>
+ATM0	(turn off the speaker)<BR>
+OK<BR>
+AT&amp;W	(save settings to NV RAM)<BR>
+OK<BR>
+~.<BR>
+If you're using the atdialer, edit the file:<BR>
+/usr/spool/uucp/default/your_modem<BR>
+and change the modem init string to include "M0."<BR>
+<P>
+Hardware Solution:<BR>
+Open the modem with a screwdriver or can opener.  Cut one wire going<BR>
+to the loudspeaker.  Reassemble modem with remaining screws or duct tape<BR>
+(whichever is more convenient).<BR>
+<P>
+Software Solution:<BR>
+RTFM the printed manual and select several pages of technobabble to<BR>
+sacrifice.  Rip out these pages and shove into the modem speaker.  Wrap<BR>
+with duct tape.<BR>
+<P>
+Hacker Solution:<BR>
+Find ice pick.  Stab speaker until dead.<BR>
+Note: This may void your warranty.<BR>
+<P>
+MSDOS/Windoze Solution:<BR>
+It's a feature, not a bug.  The noise is there for your own good.  We<BR>
+know what's good for you.  This feature will be fixed in the next<BR>
+release.<BR>
+<P>
+NT Solution:<BR>
+Run reg32edt and add the undocumented key to:<BR>
+HKEY_LOCAL_MACHINESystemCurrentControlSetServicesClass<BR>
+Modem0001AlmostThereDontGiveUpNowInit<BR>
+as:<BR>
+TurnOffTheStupidSpeaker=1<BR>
+<P>
+Kid's Solution:<BR>
+Position modem with speaker facing upward.  Pour pancake syrup into<BR>
+speaker.  This will greatly reduce the high frequency response of the<BR>
+speaker thus attenuating the sound.<BR>
+<P>
+Programmers Solution:<BR>
+Download the complete Rockwell command set from the modem manufacturer's<BR>
+site and use the bit mapped register functions to disable the speaker.<BR>
+Be sure that the warranty is still active as one mistake may also<BR>
+disable the modem.<BR>
+<P>
+Policital solution:<BR>
+Call the modem manufacturer and demand that they supply you with a modem<BR>
+that defaults with the speaker turned off.  If they refuse, sue them for<BR>
+noise pollution.<BR>
+<P>
+Fast Solution:<BR>
+Take two needles, two clip leads and a 12volt battery.  Observe that the<BR>
+leads of the speaker coil are visible through the grill where they are<BR>
+glued to the cone.  Puncture these points with the needles and apply<BR>
+12volts.  The speaker coil will fuse open.<BR>
+<P>
+Dealer Solution:<BR>
+What you need is the new Fire-Belcher 2000 wiz bang modem with the built<BR>
+in speaker phone and voice command recognition.  Just yell at the modem<BR>
+and the speaker will turn off.<BR>
+<P>
+The ILEC Solution:<BR>
+Noisy modems are a side effect of ancient POTS technology.  What you<BR>
+need is ISDN which has no dialtone, touchtones, or obnoxious noises.<BR>
+Just sign here.<BR>
+<CENTER><A HREF="choice.html"><IMG SRC="../../../images/previous.gif" ALT=Previous WIDTH=76 HEIGHT=11 BORDER=0> |</A> RHF Joke Archives <A HREF="eucalyptus.html">| <IMG SRC="../../../images/next.gif" ALT=Next WIDTH=76 HEIGHT=11 BORDER=0></A></CENTER>
+<!-- start "/include/rhf/joke-tmpl-footer.ofi" -->
+<BR>
+<CENTER>
+<A HREF="../../../past.html">Best of Jokes</A> | 
+<A HREF="../../../current.html">Current Jokes</a> | 
+<A HREF="../../../index.html">RHF Home</A> |  
+<A HREF="../../../search.html">Search</A>
+</FONT>
+<P>
+
+<!-- end "/include/rhf/joke-tmpl-footer.ofi" --></CENTER>
+<P align=center><!-- AD --></p>
+
+
+</BODY>
+
+<!-- Mirrored from www.netfunny.com/rhf/jokes/99/Feb/speaker.html by HTTrack Website Copier/3.x [XR&CO'2003], Tue, 16 Nov 2004 00:44:29 GMT -->
+</HTML>

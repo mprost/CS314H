@@ -1,0 +1,148 @@
+<TITLE>Extended Kill command [rec.humor.funny]</TITLE>
+<style type="text/css" media="Screen">
+a {
+ text-decoration: none;
+ }
+a:hover {
+ color: darkred;
+ }
+</style>
+<HTML>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#0000EE" VLINK="#551A8B">
+
+<!-- start "/include/rhf/top.ofi" -->
+<MAP NAME="joke-header-map">
+<AREA SHAPE="rect" COORDS="103,52,194,71" HREF="../../best.html" ALT="Best of Jokes">
+<AREA SHAPE="rect" COORDS="205,52,299,71" HREF="../../current.html" ALT="Current Jokes">
+<AREA SHAPE="rect" COORDS="309,52,399,71" HREF="../../index.html" ALT="RHF Home">
+<AREA SHAPE="rect" COORDS="410,52,479,71" HREF="../../search.html" ALT="Search">
+<AREA SHAPE="rect" COORDS="489,52,560,71" HREF="../../sponsor.html" ALT="Sponsor RHF?">
+</MAP>
+<CENTER>
+
+<A HREF="../../images/joke-header.html"><IMG SRC="../../images/joke-header.gif" ALT="Fun Stuff &amp; Jokes" WIDTH="560" HEIGHT="74" ISMAP USEMAP="#joke-header-map" VSPACE="8" BORDER="0"></A><BR>
+</CENTER>
+<P>
+<!-- end "/include/rhf/top.ofi" -->
+<CENTER><A HREF="usatod.html"><IMG SRC="../../images/previous.gif" ALT=Previous WIDTH=76 HEIGHT=11 BORDER=0> |</A> RHF Joke Archives <A HREF="uxsupport.html">| <IMG SRC="../../images/next.gif" ALT=Next WIDTH=76 HEIGHT=11 BORDER=0></A></CENTER><CENTER>
+<H1><FONT FACE="helvetica, ariel" COLOR="#CE0000">Extended Kill command</FONT></H1>
+<ADDRESS><a href="mailto:Claudio@edinburgh.ac.uk">Claudio@edinburgh.ac.uk</a> (Claudio Calvelli)<BR>
+</ADDRESS>
+<FONT SIZE=-1>(computer, unix, smirk, original)<BR></FONT></FONT></CENTER><P>
+<PRE>
+XKILL(1)                 USER COMMANDS                   XKILL(1)
+
+NAME
+     xkill - extended kill - kill processes or  users,  including
+     Usenet posters.
+
+SYNOPSIS
+     xkill [ -signal ] pid ...
+              ______   ___
+     xkill -l
+     xkill username [ @host ] ...
+           ________    ____
+     xkill -u [ -qs ] [ -p ] [ newsgroup ]
+                               _________
+
+DESCRIPTION
+     xkill sends a signal to a process or a terminal.  The  first
+     two  forms  send a signal to a process. The functionality in
+     this case is the same as kill (1).
+
+     When the command xkill is invoked with an username as  argu-
+     ment,  it attempts to locate the specified user on the local
+     host. If the user is logged on, the signal  ECUTE  (electro-
+     cute,  666)  is sent to the user's terminal. This will cause
+     the keyboard to electrocute the user.  If the  user  is  not
+     logged  on,  the appropriate line of the file /etc/passwd is
+                                                    ___ ______
+     marked. The first time the user logs on the ECUTE signal  is
+     sent to the terminal he is using.
+
+     When the command xkill is invoked with a remote username, in
+     the  form  user@host,  a  connection with the remote host is
+                ____ ____
+     attempted (see xkilld (8)), to send the ECUTE signal to  the
+     user's terminal.
+
+USENET KILL
+     The -u (Usenet) option is an extension  of  the  concept  of
+     KILL file.
+
+     The program will attempt to locate a remote user by scanning
+     the  news spool area. When the user is located, a connection
+     is attempted with the appropriate host, and the ECUTE (elec-
+     trocute,  666)  signal  is sent to the appropriate user. The
+     search only considers one newsgroup. If none  is  specified,
+     rec.humor  is  assumed  by  default. The program attempts to
+     ___ _____
+     locate people whose signature is too long, and who  quote  a
+     whole  article  in  order  to  comment on a single line. The
+     option -s can be used to consider only the  size  of  signa-
+     tures,  while the option -q can be used to consider only the
+     size of the quotations. The option -qs  corresponds  to  the
+     default.
+
+     When the -p (post) switch is used, the user is  electrocuted
+     next time he post news.
+
+FILES
+     /etc/passwd       to keep track of users marked for electro-
+                       cution
+
+                  Last change: 14 November 1991                 1
+
+XKILL(1)                 USER COMMANDS                   XKILL(1)
+
+     /etc/hosts        list of remote hosts
+
+     /usr/spool/news   news spool directory;  the  news  articles
+                       are stored here
+
+SEE ALSO
+     kill(1), telnet(1c), xkilld(8)
+
+BUGS
+     To kill a remote user, it is sometimes  better  to  use  the
+     command  telnet  (1c) using the standard xkilld port (number
+     666). When the connection is attempted  by  xkill  (1)  some
+     gateways will explode after the user is electrocuted.
+
+     To decide what is a quotation, and what is  a  signature,  a
+     very  complicated  pattern  matching  is used. This does not
+     always work, even if the  program  hasn't  yet  electrocuted
+     somebody who is not guilty of bandwidth waste.
+
+                  Last change: 14 November 1991                 2
+
+</PRE><center><font color=darkgreen><P>(From the "Rest" of RHF)</P></font></center><CENTER><A HREF="usatod.html"><IMG SRC="../../images/previous.gif" ALT=Previous WIDTH=76 HEIGHT=11 BORDER=0> |</A> RHF Joke Archives <A HREF="uxsupport.html">| <IMG SRC="../../images/next.gif" ALT=Next WIDTH=76 HEIGHT=11 BORDER=0></A></CENTER>
+<!-- start "/include/rhf/joke-tmpl-footer.ofi" -->
+<BR>
+<CENTER>
+<A HREF="../../past.html">Best of Jokes</A> | 
+<A HREF="../../current.html">Current Jokes</a> | 
+<A HREF="../../index.html">RHF Home</A> |  
+<A HREF="../../search.html">Search</A>
+</FONT>
+<P>
+
+<!-- end "/include/rhf/joke-tmpl-footer.ofi" --></CENTER>
+<P align=center><script type="text/javascript"><!--
+google_ad_client = "pub-5397334057241462";
+google_alternate_ad_url = "../../../../www.templetons.com/brad/effread.gif";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_channel ="6875879912";
+//--></script>
+<script type="text/javascript"
+  src="../../../../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</p>
+
+
+</BODY>
+
+<!-- Mirrored from www.netfunny.com/rhf/jokes/92q1/userkill.html by HTTrack Website Copier/3.x [XR&CO'2003], Tue, 16 Nov 2004 00:15:33 GMT -->
+</HTML>

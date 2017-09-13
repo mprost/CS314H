@@ -1,0 +1,275 @@
+<TITLE>Irish/Mexican cuisine? MacBurrito! [rec.humor.funny]</TITLE>
+<style type="text/css" media="Screen">
+a {
+ text-decoration: none;
+ }
+a:hover {
+ color: darkred;
+ }
+</style>
+<HTML>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#0000EE" VLINK="#551A8B">
+
+<!-- start "/include/rhf/top.ofi" -->
+<MAP NAME="joke-header-map">
+<AREA SHAPE="rect" COORDS="103,52,194,71" HREF="../../best.html" ALT="Best of Jokes">
+<AREA SHAPE="rect" COORDS="205,52,299,71" HREF="../../current.html" ALT="Current Jokes">
+<AREA SHAPE="rect" COORDS="309,52,399,71" HREF="../../index.html" ALT="RHF Home">
+<AREA SHAPE="rect" COORDS="410,52,479,71" HREF="../../search.html" ALT="Search">
+<AREA SHAPE="rect" COORDS="489,52,560,71" HREF="../../sponsor.html" ALT="Sponsor RHF?">
+</MAP>
+<CENTER>
+
+<A HREF="../../images/joke-header.html"><IMG SRC="../../images/joke-header.gif" ALT="Fun Stuff &amp; Jokes" WIDTH="560" HEIGHT="74" ISMAP USEMAP="#joke-header-map" VSPACE="8" BORDER="0"></A><BR>
+</CENTER>
+<P>
+<!-- end "/include/rhf/top.ofi" -->
+<CENTER><A HREF="treejob.html"><IMG SRC="../../images/previous.gif" ALT=Previous WIDTH=76 HEIGHT=11 BORDER=0> |</A> RHF Joke Archives <A HREF="nosoapradio.html">| <IMG SRC="../../images/next.gif" ALT=Next WIDTH=76 HEIGHT=11 BORDER=0></A></CENTER><CENTER>
+<H1><FONT FACE="helvetica, ariel" COLOR="#CE0000">Irish/Mexican cuisine? MacBurrito!</FONT></H1>
+<ADDRESS><a href="mailto:gurgle@netcom.com">gurgle@netcom.com</a> (Pete Gontier)<BR>
+</ADDRESS>
+<FONT SIZE=-1>(smirk, computers, long)<BR></FONT></FONT></CENTER><P>
+<PRE>Following is the documentation for a computer program which lives at
+Adobe (PostScript/fonts/Acrobat/Photoshop/Illustrator) in Mountain
+View, California. I got permission from the author to re-post it for
+him.
+
+Some background: La Costena is a Mexican restaurant local to Adobe.
+Everything is made to order, and the cooks follow you down a sort of
+burrito assembly line in order to customize your meal.  Not
+surprisingly, the place is very popular, and there are often long
+lines. Mr. Thompson has thus enlisted the aid of technology to avoid
+wasting too much time in queue.
+
+-----------------------------------------------------------------------
+
+From thompson@mv.us.adobe.com Wed Aug 18 07:05:38 1993
+Message-Id: &lt;9308181404.AA10840@rhythmic.mv.us.adobe.com&gt;
+To: gurgle@netcom.com (Pete Gontier)
+Subject: Re: Burritos 
+Date: Wed, 18 Aug 93 07:04:48 MDT
+
+Here you go.  You may want to add some editorial notes for those
+unfortunate to live outside the Bay area.  By the way, this is a real
+program.
+
+- Ross
+
+-----------------------------------------------------------------------
+
+Tired of standing in line at La Costena?  This file documents an
+automatic facility for sending a fax to La Costena that orders 1 or
+more burritos, quesadillas, tacos, and whatever.  The command will
+compose the fax, and send it to your favorite PostScript fax printer,
+for direct transmission to La Costena, and no paper at this end will
+be generated.  Then, when you get there, your food will be waiting.
+No worries.
+
+To use this, you will want to add the following lines to your .cshrc
+file:
+
+setenv BURRITOPRINTER = &lt;printer&gt;
+alias burrito /user/thompson/public/burrito&lt;mach&gt;
+
+where &lt;mach&gt; is dec, sun, or sparc, as appropriate.  Requests to
+support other machine types will be greeted with enthusiasm if the
+following conditions are met:
+ 1) I can get the code to compile with a minimum of effort.
+	(I expect no difficulties, but you never know).
+ 2) I am provided with the name of a machine on which to do the build.
+
+&lt;printer&gt; should be the name of a PostScript level 2 printer that
+supports fax and is connected to an external phone line. I use
+radiant, which is located in building E.
+
+You will also probably want to create a .costenarc file, to define
+your burrito macros in.  The one in /user/thompson/.costenarc is
+designed to stand as an example that you can use.  Feel free to copy,
+modify, whatever.  I think the syntax should be pretty
+straightforward, if you understand how to describe a burrito.
+
+In keeping with long standing Unix tradition, the syntax for
+specifying burritos is somewhat obscure. Here is an attempt at
+explanation, with some examples at the end.  For a better
+understanding, the energetic reader will attempt to thoroughly
+comprehend the contents of my .costenarc file.
+
+burrito [-n "name"] [-t &lt;time&gt;] [-p phone#] [-9] [-d] [-x] [FoodSpec [...]]
+
+    -n  specify the name at the top of the order blank.
+	   This should be the name of the person who will pick
+	   up the order.  Default is current user, as defined in
+	   /etc/passwd.
+    -t  specify the time at which you will pick up the order.
+    	   time may be absolute 24 hour time or +delta. Default is +1:00.
+    	   Note that La Costena specifies a 20 minute on small orders
+	   and 60 minute on large orders minimum notification time.
+    -p  specify callback number in case La Costena has questions.
+	   default is as found in /usr/local/adobe/phones/adobe.phones.
+	   If your phone number is not specified, and burrito can't
+	   figure it out by looking in adobe.phones, an error will result,
+	   and the order will not be transmitted.
+	   syntaxes for phone numbers:
+		    entry		interpretation
+		(408)123-4567		(408)123-4567
+		123-4567		(415)123-4567
+		x4567			(415)962-4567
+	    If you are entering the phone number on the command line
+	    (instead of using a macro) please note that the ()'s need
+	    to be escaped: \\(408\\)....
+    -9	dial "9" before dialing the La Costena number.
+  The following two options are installed primarily to help me debug
+  the code.  There is probably no reason for general use of these options,
+  unless you have some perverse desire to see the guts of this thing
+  in operation.
+    -d  debug: print the file locally rather than faxing it.
+    -x  xmit off: don't run the shell script at all.  PostScript file
+	will be left in ~/.faxorder.ps
+
+Up to six FoodSpecs can be specified:
+
+FoodSpec::=&lt;type&gt;[options*][/&lt;name&gt;]
+&lt;type&gt; ::= [b|t|m|q|T]
+    (burrito, taco, mexico city, quesadilla, Taqitaco)
+options:
+    +g  gucamole
+    +c  cheddar
+    +cc cotija
+    +cl cilantro
+    +cm monterey
+    +i"note" special instructions (e.g. black beans, no rice, etc.)
+	NOTE: the "s need to be escaped if the shell sees them:
+	   +i\"note\"
+    +j  whole jalepenos
+    +jf fresh jalapenos
+    +js sliced jalapenos
+    +n:&lt;i&gt; &lt;i&gt; copies of this food item. (default = 1)
+    +o  olives
+    +s  medium salsa
+    +sc sour cream
+    +sf fire salsa
+    +sh hot salsa
+    +sm mild salsa
+    +sv salsa verde
+    +t  tomato
+    +v:ca carne azada
+    +v:cc chile colorado
+    +v:cv chile verde
+    +v:f  fiesta
+    +v:l  lengua  (beef tongue)
+    +v:m  mole    (chicken)
+    +v:p  pastor
+    +v:pb pollo borracho
+    +v:rb rice and beans (default)
+    +v:v  vegetarian
+    +z:l  large
+    +z:r  regular (default)
+    +z:c  chico (small)
+
+    -[option] cancels option.  Not valid for ":" options or +i.  
+       This is useful for modifying burrito macros specified in
+        .costenarc file.
+
+example:
+
+burrito -time +:30 b+g+cc+jf+jf+sf+sc-sc+i"Black Beans"+n:2/Ross \
+   b+v:cc+g+cm+sc+i"no rice"/Kathie
+
+interpretation:
+logged in user will pick up an order in 30 minutes.
+  Ross wants two rice and bean (default) burritos with
+    guacamole
+    cotija
+    fresh jalepenos (double)
+    fire salsa
+    no sour cream (cancelled)
+    Black beans (comment)
+  Kathie wants a Chile Colorado burrito with
+    guacamole
+    montery cheese
+    sour cream
+    no rice (comment)
+
+You should keep your +i comments short, because there isn't much space on
+the form for them, and the space is not used particularly well by my
+PostScript program.  "Black beans, no rice" is about as long a
+message as it can handle.
+
+FILES:
+	/etc/passwd
+	/usr/local/adobe/phones/adobe.phones
+	$HOME/.costenarc
+	$HOME/.faxorder.ps
+
+ENVIRONMENT VARIABLES:
+	BURRITOPRINTER
+
+BUGS:
+   There's all kinds of ways to break this thing.  The lines in your
+\.costenarc file should be less than 1000 characters, or the stack will
+get trashed.  The PostScript program does not make particularly good
+use of the "Comments" section of the form (controlled by the "+i"
+switch), and doesn't detect when it is writing things off the side of
+the page.  I have no idea what will happen if the disk is full when
+burrito tries to write the .faxorder.ps file, or if it can't open it
+because the directory is protected, or whatever.  But if you are
+reasonable in your expectations of the program, and don't try to break
+it, I think you'll find that it's adequate.  For bug reports, see my
+comments below about future enhancements.
+
+FUTURE ENHANCEMENTS:
+   This is the kind of thing that everybody will have suggestions on
+how to improve.  I will duly record every feature enhancement request,
+but I can't promise that I'll do any more than that.  I have no
+intention whatsoever, for example, of writing a Graphical User
+Interface for this thing, even though so many people think that it's a
+natural.  (However, see below.)  As I have said (many times) before
+about this: "When I'm done with the program, you are more than welcome
+to add any features that you wish."  Well, I'm (essentially) done.
+Anyone who wants the source, it's in /user/thompson/public/burrito.c.
+Gombata Kodesai.
+
+ACKNOWLEDGMENTS:
+    Steve Hawley has written two programs that make use of burrito
+technology.  I don't know anything about them except that they exist,
+but I thought I would mention them for what it's worth.  As far as I
+know, they were both done as intellectual exercises, and are not
+necessarily supported.
+    - xburrito is a GUI overlay to the burrito program, which makes
+	use of the motif library to animate the La Costena order form.
+	This has been successfully run on DecStations, Sparcs, and
+	perhaps other platforms.
+    - macburrito is a gooey which runs on Macs.  It has the look and
+	feel of a real burrito: The user interface involves throwing
+	toppings onto a tortilla.
+
+</PRE><center><font color=darkgreen><P>(From the "Rest" of RHF)</P></font></center><CENTER><A HREF="treejob.html"><IMG SRC="../../images/previous.gif" ALT=Previous WIDTH=76 HEIGHT=11 BORDER=0> |</A> RHF Joke Archives <A HREF="nosoapradio.html">| <IMG SRC="../../images/next.gif" ALT=Next WIDTH=76 HEIGHT=11 BORDER=0></A></CENTER>
+<!-- start "/include/rhf/joke-tmpl-footer.ofi" -->
+<BR>
+<CENTER>
+<A HREF="../../past.html">Best of Jokes</A> | 
+<A HREF="../../current.html">Current Jokes</a> | 
+<A HREF="../../index.html">RHF Home</A> |  
+<A HREF="../../search.html">Search</A>
+</FONT>
+<P>
+
+<!-- end "/include/rhf/joke-tmpl-footer.ofi" --></CENTER>
+<P align=center><script type="text/javascript"><!--
+google_ad_client = "pub-5397334057241462";
+google_alternate_ad_url = "../../../../www.templetons.com/brad/effread.gif";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_channel ="6875879912";
+//--></script>
+<script type="text/javascript"
+  src="../../../../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</p>
+
+
+</BODY>
+
+<!-- Mirrored from www.netfunny.com/rhf/jokes/94q1/burritopgm.html by HTTrack Website Copier/3.x [XR&CO'2003], Tue, 16 Nov 2004 00:22:08 GMT -->
+</HTML>

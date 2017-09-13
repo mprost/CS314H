@@ -1,0 +1,10 @@
+InvalidParameterTest4
+ifenemy 0 4
+ifally 0 -r1
+ifangle 0 0 4
+hop
+left
+go 1
+
+Checks if error statement is printed when parameters are registers 
+being used for relative jumps.

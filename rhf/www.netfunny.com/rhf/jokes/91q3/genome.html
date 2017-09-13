@@ -1,0 +1,165 @@
+<TITLE>A little C programming...  [rec.humor.funny]</TITLE>
+<style type="text/css" media="Screen">
+a {
+ text-decoration: none;
+ }
+a:hover {
+ color: darkred;
+ }
+</style>
+<HTML>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#0000EE" VLINK="#551A8B">
+
+<!-- start "/include/rhf/top.ofi" -->
+<MAP NAME="joke-header-map">
+<AREA SHAPE="rect" COORDS="103,52,194,71" HREF="../../best.html" ALT="Best of Jokes">
+<AREA SHAPE="rect" COORDS="205,52,299,71" HREF="../../current.html" ALT="Current Jokes">
+<AREA SHAPE="rect" COORDS="309,52,399,71" HREF="../../index.html" ALT="RHF Home">
+<AREA SHAPE="rect" COORDS="410,52,479,71" HREF="../../search.html" ALT="Search">
+<AREA SHAPE="rect" COORDS="489,52,560,71" HREF="../../sponsor.html" ALT="Sponsor RHF?">
+</MAP>
+<CENTER>
+
+<A HREF="../../images/joke-header.html"><IMG SRC="../../images/joke-header.gif" ALT="Fun Stuff &amp; Jokes" WIDTH="560" HEIGHT="74" ISMAP USEMAP="#joke-header-map" VSPACE="8" BORDER="0"></A><BR>
+</CENTER>
+<P>
+<!-- end "/include/rhf/top.ofi" -->
+<CENTER><A HREF="orac916.html"><IMG SRC="../../images/previous.gif" ALT=Previous WIDTH=76 HEIGHT=11 BORDER=0> |</A> RHF Joke Archives <A HREF="strfry.html">| <IMG SRC="../../images/next.gif" ALT=Next WIDTH=76 HEIGHT=11 BORDER=0></A></CENTER><CENTER>
+<H1><FONT FACE="helvetica, ariel" COLOR="#CE0000">A little C programming... </FONT></H1>
+<ADDRESS>cxdocs.enet!dchavez@decwrl.UUCP (Dale - Colo Spgs ESDP 523-2202 29-May-1991 0747)<BR>
+</ADDRESS>
+<FONT SIZE=-1>(computer, smirk)<BR></FONT></FONT></CENTER><P>
+<PRE>{ed Reported author mathew@mantis.co.uk}
+
+For many years molecular biologists have been mystified by the fact that very
+little of an organism's DNA seems to serve any useful function.
+ 
+I have solved the mystery.
+ 
+The reason why only 30% of human DNA performs any useful function is that the
+rest of it is comments.
+ 
+Once we decode a typical human genome, we see that the contents begin as
+follows:
+ 
+===
+/* HUMAN_DNA.H
+ *
+ * Human Genome
+ * Version 2.1
+ *
+ * (C) God
+ */
+ 
+/* Revision history:
+ *
+ * 0000-00-01 00:00  1.0  Adam.
+ * 0000-00-02 10:00  1.1  Eve.
+ * 0000-00-03 02:11  1.2  Added penis code to male version. A bit messy --
+ *                        will require a rewrite later on to make it neater.
+ * 0017-03-12 03:14  1.3  Added extra sex drive to male.h; took code from
+ *                        elephant-dna.c
+ * 0145-10-03 16:33  1.4  Removed tail.
+ * 1115-00-31 17:20  1.5  Shortened forearms, expanded brain case.
+ * 2091-08-20 13:56  1.6  Opposable thumbs added to hand() routine.
+ * 2501-04-09 14:04  1.7  Minor cosmetic improvements -- skin colour made
+ *                        darker to match my own image.
+ * 2909-07-12 02:21  1.8  Dentition inadequate; added extra 'wisdom' teeth.
+ *                        Must remember to make mouth bigger to compensate.
+ * 4501-12-31 14:18  1.9  Increase average height.
+ * 5533-02-12 17:09  2.0  Added gay option, triggered by high population
+ *                        density, to try and slow the overpopulation problem.
+ * 6004-11-04 16:11  2.1  Made forefinger narrower to fit hole in centre of
+ *                        CD.
+ */
+ 
+/* Standard definitions
+ */
+ 
+#define SEX male
+#define HEIGHT 1.84
+#define MASS 68
+#define RACE caucasian
+ 
+/* Include inherited traits from parent DNA files.
+ *
+ * Files must be pre-processed with MENDEL program to provide proper
+ * inheritance features.
+ */
+ 
+#include "mother.h"
+#include "father.h"
+ 
+#infndef FATHER
+#warn("Father unknown -- guessing\n")
+#include "bastard.h"
+#endif
+ 
+/* Set up sex-specific functions and variables
+ */
+#include &lt;sex.h&gt;
+ 
+/* Kludged code -- I'll re-design this lot and re-write it as a proper
+ * library sometime soon.
+ */
+struct genitals
+   {
+#ifdef MALE
+   Penis *jt;
+#endif
+   /* G_spot *g;   Removed for debugging purposes */
+#ifdef FEMALE
+   Vagina *p;
+#endif
+   }
+ 
+/* Initialization bootstrap routine -- called before DNA duplication.
+ * Allocates buffers and sets up protein file pointers
+ */
+DNA *zygote_initialize(Sperm *, Ovum *);
+ 
+/* MAIN INITIALIZATION CODE
+ *
+ * Returns structures containing pre-processed phenotypes for the organism
+ * to display at birth.
+ *
+ * Will be improved later to make output less ugly.
+ */
+Characteristic *lookup_phenotype(Identifier *i);
+===
+ 
+...and so on.
+ 
+ 
+[ Note that God uses three-space tabs ]
+
+</PRE><center><font color=darkgreen><P>(From the "Rest" of RHF)</P></font></center><CENTER><A HREF="orac916.html"><IMG SRC="../../images/previous.gif" ALT=Previous WIDTH=76 HEIGHT=11 BORDER=0> |</A> RHF Joke Archives <A HREF="strfry.html">| <IMG SRC="../../images/next.gif" ALT=Next WIDTH=76 HEIGHT=11 BORDER=0></A></CENTER>
+<!-- start "/include/rhf/joke-tmpl-footer.ofi" -->
+<BR>
+<CENTER>
+<A HREF="../../past.html">Best of Jokes</A> | 
+<A HREF="../../current.html">Current Jokes</a> | 
+<A HREF="../../index.html">RHF Home</A> |  
+<A HREF="../../search.html">Search</A>
+</FONT>
+<P>
+
+<!-- end "/include/rhf/joke-tmpl-footer.ofi" --></CENTER>
+<P align=center><script type="text/javascript"><!--
+google_ad_client = "pub-5397334057241462";
+google_alternate_ad_url = "../../../../www.templetons.com/brad/effread.gif";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_channel ="6875879912";
+//--></script>
+<script type="text/javascript"
+  src="../../../../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</p>
+
+
+</BODY>
+
+<!-- Mirrored from www.netfunny.com/rhf/jokes/91q3/genome.html by HTTrack Website Copier/3.x [XR&CO'2003], Tue, 16 Nov 2004 00:13:49 GMT -->
+</HTML>

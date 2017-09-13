@@ -1,0 +1,183 @@
+<TITLE>FUN: Microsoft C++ [rec.humor.funny]</TITLE>
+<style type="text/css" media="Screen">
+a {
+ text-decoration: none;
+ }
+a:hover {
+ color: darkred;
+ }
+</style>
+<HTML>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#0000EE" VLINK="#551A8B">
+
+<!-- start "/include/rhf/top.ofi" -->
+<MAP NAME="joke-header-map">
+<AREA SHAPE="rect" COORDS="103,52,194,71" HREF="../../best.html" ALT="Best of Jokes">
+<AREA SHAPE="rect" COORDS="205,52,299,71" HREF="../../current.html" ALT="Current Jokes">
+<AREA SHAPE="rect" COORDS="309,52,399,71" HREF="../../index.html" ALT="RHF Home">
+<AREA SHAPE="rect" COORDS="410,52,479,71" HREF="../../search.html" ALT="Search">
+<AREA SHAPE="rect" COORDS="489,52,560,71" HREF="../../sponsor.html" ALT="Sponsor RHF?">
+</MAP>
+<CENTER>
+
+<A HREF="../../images/joke-header.html"><IMG SRC="../../images/joke-header.gif" ALT="Fun Stuff &amp; Jokes" WIDTH="560" HEIGHT="74" ISMAP USEMAP="#joke-header-map" VSPACE="8" BORDER="0"></A><BR>
+</CENTER>
+<P>
+<!-- end "/include/rhf/top.ofi" -->
+<CENTER><A HREF="../95q1/netcomsupport.html"><IMG SRC="../../images/previous.gif" ALT=Previous WIDTH=76 HEIGHT=11 BORDER=0> |</A> Browse the Best of RHF: "<A HREF="../computer.html">Computer, Science and Math Jokes</A>" <A HREF="../95q3/aol2.html">| <IMG SRC="../../images/next.gif" ALT=Next WIDTH=76 HEIGHT=11 BORDER=0></A></CENTER><table align=right><tr><td width=175 height=630 valign=center align=right>
+<script type="text/javascript"><!--
+google_ad_client = "pub-5397334057241462";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_channel ="6875879912";
+//--></script>
+<script type="text/javascript"
+  src="../../../../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</td></tr></table>
+<CENTER>
+<H1><FONT FACE="helvetica, ariel" COLOR="#CE0000">FUN: Microsoft C++</FONT></H1>
+<ADDRESS><a href="mailto:JDEMELLO@us.oracle.com">JDEMELLO@us.oracle.com</a> (Jeff DeMello, Oracle Secure Systems)<BR>
+Oracle Corporation<BR>
+</ADDRESS>
+<FONT SIZE=-1>(chuckle, computers)<BR></FONT></FONT></CENTER><P>
+<HTML>
+<P>
+Thanks to Rick Wessman.... 
+<P>
+an actual bug report 
+<P>
+[ This is from a friend at Microsoft ] 
+<P>
+<BR>Bug #   Status          Title<BR>
+5143    ACTIVE          "Build done" signal makes no sound<BR>
+---------- ACTIVE - 01/30/95 - MIKEBLAS --------------------<BR>
+<P>
+Visual C++ makes an audible signal when a build completes. When no developer<BR>
+is in the room, this signal doesn't make a sound. To reproduce:<BR>
+<P>
+<!--  list-->
+<OL><LI>Start a build.<BR>
+<LI>Leave the room.<BR>
+<LI>Note that the chime does not make a sound.<BR>
+</OL>
+<P>
+We should find a way to make the build bell make a sound even if nobody is<BR>
+there to hear it.<BR>
+<P>
+This philosophical issue may need program management's attention before being<BR>
+resolved.<BR>
+<P>
+---------- ASSIGNED to MATTHEWT - 01/30/95 - SCOTF ---------<BR>
+<P>
+Can we use the telepathy support in Win95 to contact whomever is logged into<BR>
+the machine doing the build? Maybe we should just detect when the developer is<BR>
+leaving the room and prompt for a phone number where s/he can be reached.<BR>
+<P>
+How about disabling leaving the room during a build?<BR>
+<P>
+---------- RESOLVED - BY DESIGN - 01/31/95 - MATTHEWT ------<BR>
+---------- ACTIVE - 02/01/95 - MARKLAM ---------------------<BR>
+<P>
+Actually, we can't do this either. The problem is that while you're out of the<BR>
+room your build is neither finished nor unfinished. It stays in a state of<BR>
+flux until you return and collapse the quantum uncertainty by observing it.<BR>
+<P>
+Perhaps we could link the build finished event to a cat in a box?<BR>
+<P>
+---------- ASSIGNED to HEISENBERG - 02/01/95 - MARKLAM -----<BR>
+---------- RESOLVED - NOT REPRO - 02/03/95 - HEISENBERG ----<BR>
+<P>
+I cannot repro this. I tried standing just outside my door and it made the<BR>
+beep. Do I have to go further from my office? Would the mailroom do?<BR>
+<P>
+---------- ACTIVE - 02/03/95 - MIKEBLAS --------------------<BR>
+<P>
+The relative position of the mailroom and your office are relatively uncertain<BR>
+to me, Doctor.<BR>
+<P>
+Please try again:<BR>
+<P>
+<!--  list-->
+<OL><LI>start a build<BR>
+<LI>leave your office<BR>
+<LI>go down the hall<BR>
+<LI>wait until you don't hear the beep<BR>
+<LI>return to note that the build is done<BR>
+</OL>
+<P>
+I think this is how I first repro'ed the problem, but I can't remember what I<BR>
+was doing to make it happen.<BR>
+<P>
+The idea of disabling leaving the room might be the best possible solution, I<BR>
+think. When a build starts, the IDE should pop up a message that says, "There<BR>
+are no more Fritos" or "The kitchen has closed early" or "The bathroom is<BR>
+being cleaned" so the developer will not be tempted to get up and wander<BR>
+around.<BR>
+<P>
+With minimal rebuild in place, we should consider diversions that won't take<BR>
+as long to remedy: "You're expecting a phone call" or "Someone will stop by to<BR>
+see you soon."<BR>
+<P>
+We need to think of messages that are easy to localize for VC++3.0J.<BR>
+<P>
+---------- ASSIGNED to MIKEBLAS - 02/13/95 - MARKLAM -------<BR>
+<P>
+To do this we'll need to avoid messages about the bathrooms and vending<BR>
+machines for external releases. Perhaps some customer research is needed to<BR>
+find out exactly <B>why</B> Visual C++ users leave their keyboards.<BR>
+<P>
+Some suggestions (including MB_ types)<BR>
+Get a drink :<BR>
+(i) You're out of coffee<BR>
+(i) You're out of tea<BR>
+(i)(i) YYoouuvv''ee hhaadd eennoouugghh<BR>
+<P>
+Get something to eat :<BR>
+(?) You have no food, remember<BR>
+/!\ You need to lose weight, fatso. Sit your ass down<BR>
+<P>
+Exercise etc :<BR>
+(?) Did You Know - sunlight causes skin cancer<BR>
+(i) With a Nordik Trak you can get a workout in front of your monitor.<BR>
+Call for home delivery<BR>
+/!\ I didn't mean that about your weight<BR>
+<P>
+See family :<BR>
+(i) They already know you love them<BR>
+/!\ They'll only want money for something<BR>
+/!\ Your in-laws have arrived<BR>
+<P>
+Call of nature :<BR>
+<P>
+This could be difficult. Consider supplying bed-pan or similar.<BR>
+<P>
+---------- ASSIGNED to MIKEBLAS - 02/13/95 - MARKLAM -------<BR>
+---------- ASSIGNED to MIKEBLAS - 02/16/95 - HEISENBERG ----<BR>
+<P>
+I attempted to repro this once more:<BR>
+<P>
+I placed my machine in the forest at the edge of the campus. I started a<BR>
+'rebuild all' and ran out of the forest towards my mailroom. My build normally<BR>
+takes 3 minutes. After 5 minutes I had not heard anything, so I returned to my<BR>
+machine. Unfortunately a tree had fallen on it. I had not heard that, either.<BR>
+<CENTER><A HREF="../95q1/netcomsupport.html"><IMG SRC="../../images/previous.gif" ALT=Previous WIDTH=76 HEIGHT=11 BORDER=0> |</A> Browse the Best of RHF: "<A HREF="../computer.html">Computer, Science and Math Jokes</A>" <A HREF="../95q3/aol2.html">| <IMG SRC="../../images/next.gif" ALT=Next WIDTH=76 HEIGHT=11 BORDER=0></A></CENTER>
+<!-- start "/include/rhf/joke-tmpl-footer.ofi" -->
+<BR>
+<CENTER>
+<A HREF="../../past.html">Best of Jokes</A> | 
+<A HREF="../../current.html">Current Jokes</a> | 
+<A HREF="../../index.html">RHF Home</A> |  
+<A HREF="../../search.html">Search</A>
+</FONT>
+<P>
+
+<!-- end "/include/rhf/joke-tmpl-footer.ofi" --></CENTER>
+<P align=center><!-- AD --></p>
+
+
+</BODY>
+
+<!-- Mirrored from www.netfunny.com/rhf/jokes/95q2/bugrpt.html by HTTrack Website Copier/3.x [XR&CO'2003], Tue, 16 Nov 2004 00:25:27 GMT -->
+</HTML>

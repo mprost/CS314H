@@ -1,0 +1,119 @@
+<TITLE>Re: Change bulb in sed? [rec.humor.funny]</TITLE>
+<style type="text/css" media="Screen">
+a {
+ text-decoration: none;
+ }
+a:hover {
+ color: darkred;
+ }
+</style>
+<HTML>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#0000EE" VLINK="#551A8B">
+
+<!-- start "/include/rhf/top.ofi" -->
+<MAP NAME="joke-header-map">
+<AREA SHAPE="rect" COORDS="103,52,194,71" HREF="../../best.html" ALT="Best of Jokes">
+<AREA SHAPE="rect" COORDS="205,52,299,71" HREF="../../current.html" ALT="Current Jokes">
+<AREA SHAPE="rect" COORDS="309,52,399,71" HREF="../../index.html" ALT="RHF Home">
+<AREA SHAPE="rect" COORDS="410,52,479,71" HREF="../../search.html" ALT="Search">
+<AREA SHAPE="rect" COORDS="489,52,560,71" HREF="../../sponsor.html" ALT="Sponsor RHF?">
+</MAP>
+<CENTER>
+
+<A HREF="../../images/joke-header.html"><IMG SRC="../../images/joke-header.gif" ALT="Fun Stuff &amp; Jokes" WIDTH="560" HEIGHT="74" ISMAP USEMAP="#joke-header-map" VSPACE="8" BORDER="0"></A><BR>
+</CENTER>
+<P>
+<!-- end "/include/rhf/top.ofi" -->
+<CENTER><A HREF="morechick.html"><IMG SRC="../../images/previous.gif" ALT=Previous WIDTH=76 HEIGHT=11 BORDER=0> |</A> RHF Joke Archives <A HREF="kidwar.html">| <IMG SRC="../../images/next.gif" ALT=Next WIDTH=76 HEIGHT=11 BORDER=0></A></CENTER><CENTER>
+<H1><FONT FACE="helvetica, ariel" COLOR="#CE0000">Re: Change bulb in sed?</FONT></H1>
+<ADDRESS><a href="mailto:steven@prl.philips.nl">steven@prl.philips.nl</a> (Steven Van Lerberghe 42468)<BR>
+none<BR>
+</ADDRESS>
+<FONT SIZE=-1>(computer, smirk)<BR></FONT></FONT></CENTER><P>
+<PRE>
+In article &lt;S274.749d@looking.on.ca&gt; gest_ss@uhura.cc.rochester.edu (Gavin Stark) writes:
+&gt;
+&gt;How many lines of sed code does it take to change a lightbulb?
+&gt;
+&gt;I don't know... but its only 74 in Postscript.
+&gt;--
+&gt;Edited by Brad Templeton.  MAIL your jokes (jokes ONLY) to funny@looking.ON.CA
+
+%!
+/bulb                         % draw a light-bulb with text `ID' in it
+{gsave                        % called as:
+translate rotate              % &lt;orientation&gt; &lt;x-place&gt; &lt;y-place&gt; bulb
+0.5 0.5 scale                 %
+/alfa 41.40962211 def         % some angle that puts the centers of
+/sina alfa sin -2 mul def     % the necessary arcs at coordinates
+                              % (0,0) (-1.5, -2*sine of alfa) (or:
+newpath                       % -1.5, sina) and (1.5, sina) 
+0.4 sina 0.1 270 360 arc      % rounded left-bottom corner
+1.5 sina 1 180 180 alfa sub arcn % outline of buld
+0 0 1 alfa neg 180 alfa add arc  % in three consecutive
+-1.5 sina 1 alfa 0 arcn       % ...outline of bulb in three consec. arc
+-0.4 sina 0.1 180 270 arc     % rounded right-bottom corner
+closepath 0.925 setgray  fill % draw it in `almost-white'
+                              %
+newpath                       %
+-0.4 sina 0.1 sub moveto      % and this draws the `fitting'
+0 -0.45 rlineto
+-0.35 sina 0.55 sub 0.05 180 270 arc
+0.7 0 rlineto
+0.35 sina 0.55 sub 0.05 270 360 arc
+0 0.45 rlineto
+closepath  0.5 setgray  fill  % ...partly in half-gray
+                              %
+newpath                       %
+-0.3 sina 0.6 sub moveto      %
+0.1 -0.1 rlineto 0.4 0 rlineto
+0.3 sina 0.6 sub lineto       %
+closepath  0 setgray  fill    % ...and partly in black
+                              %
+newpath  0.9775 setgray       % ...plus some `light rays'
+0.025 setlinewidth
+-45 rotate 1 1 7 {1.1 0 moveto
+1.6 0 lineto 45 rotate pop} for
+90 rotate stroke
+
+newpath                       % this is the text `ID'
+/Helvetica-Bold findfont      %
+1 scalefont setfont           % ...set in the center
+0 0 moveto  (ID) dup          % 
+stringwidth pop 2 div neg -0.5 rmoveto
+0.5 1 1 sethsbcolor show grestore } def % ...also in black
+
+300 425 translate 150 150 scale
+0 0 0 bulb                    % an example of a call
+
+showpage
+</PRE><center><font color=darkgreen><P>(From the "Rest" of RHF)</P></font></center><CENTER><A HREF="morechick.html"><IMG SRC="../../images/previous.gif" ALT=Previous WIDTH=76 HEIGHT=11 BORDER=0> |</A> RHF Joke Archives <A HREF="kidwar.html">| <IMG SRC="../../images/next.gif" ALT=Next WIDTH=76 HEIGHT=11 BORDER=0></A></CENTER>
+<!-- start "/include/rhf/joke-tmpl-footer.ofi" -->
+<BR>
+<CENTER>
+<A HREF="../../past.html">Best of Jokes</A> | 
+<A HREF="../../current.html">Current Jokes</a> | 
+<A HREF="../../index.html">RHF Home</A> |  
+<A HREF="../../search.html">Search</A>
+</FONT>
+<P>
+
+<!-- end "/include/rhf/joke-tmpl-footer.ofi" --></CENTER>
+<P align=center><script type="text/javascript"><!--
+google_ad_client = "pub-5397334057241462";
+google_alternate_ad_url = "../../../../www.templetons.com/brad/effread.gif";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_channel ="6875879912";
+//--></script>
+<script type="text/javascript"
+  src="../../../../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</p>
+
+
+</BODY>
+
+<!-- Mirrored from www.netfunny.com/rhf/jokes/91q3/pschbulb.html by HTTrack Website Copier/3.x [XR&CO'2003], Tue, 16 Nov 2004 00:13:57 GMT -->
+</HTML>

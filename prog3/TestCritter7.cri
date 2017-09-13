@@ -1,0 +1,12 @@
+TestCritter7
+write r1 0
+write r2 3
+add r1 r2
+infect 
+left
+ifeq r2 r1 8
+right
+go 4
+
+This shows that the conditional methods with three parameters work 
+correctly.

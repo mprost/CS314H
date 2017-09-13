@@ -1,0 +1,224 @@
+<TITLE>From the ACM [rec.humor.funny]</TITLE>
+<style type="text/css" media="Screen">
+a {
+ text-decoration: none;
+ }
+a:hover {
+ color: darkred;
+ }
+</style>
+<HTML>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#0000EE" VLINK="#551A8B">
+
+<!-- start "/include/rhf/top.ofi" -->
+<MAP NAME="joke-header-map">
+<AREA SHAPE="rect" COORDS="103,52,194,71" HREF="../../best.html" ALT="Best of Jokes">
+<AREA SHAPE="rect" COORDS="205,52,299,71" HREF="../../current.html" ALT="Current Jokes">
+<AREA SHAPE="rect" COORDS="309,52,399,71" HREF="../../index.html" ALT="RHF Home">
+<AREA SHAPE="rect" COORDS="410,52,479,71" HREF="../../search.html" ALT="Search">
+<AREA SHAPE="rect" COORDS="489,52,560,71" HREF="../../sponsor.html" ALT="Sponsor RHF?">
+</MAP>
+<CENTER>
+
+<A HREF="../../images/joke-header.html"><IMG SRC="../../images/joke-header.gif" ALT="Fun Stuff &amp; Jokes" WIDTH="560" HEIGHT="74" ISMAP USEMAP="#joke-header-map" VSPACE="8" BORDER="0"></A><BR>
+</CENTER>
+<P>
+<!-- end "/include/rhf/top.ofi" -->
+<CENTER><A HREF="12632.html"><IMG SRC="../../images/previous.gif" ALT=Previous WIDTH=76 HEIGHT=11 BORDER=0> |</A> RHF Joke Archives <A HREF="20424.6.html">| <IMG SRC="../../images/next.gif" ALT=Next WIDTH=76 HEIGHT=11 BORDER=0></A></CENTER><CENTER>
+<H1><FONT FACE="helvetica, ariel" COLOR="#CE0000">From the ACM</FONT></H1>
+<ADDRESS>gm@trsvax.UUCP (George Moore)<BR>
+</ADDRESS>
+<FONT SIZE=-1>(chuckle)<BR></FONT></FONT></CENTER><P>
+<HTML>
+This is from the Feb 1988 issue of the _Communications of the ACM_.  I 
+thought is was hilarious what those wacky Pixar people were up to: 
+<P>
+<HR>
+<P>
+<PRE><P>
+		Ray Tracing Jell-O Brand Gelatin 
+							Paul S. Heckbert 
+<P>
+   Ray tracing has established itself in recent years as the most general 
+image-synthesis algorithm[10].  Researchers have investigated ray-surface 
+intersection calculations for a number of surface primitives.  These have 
+included checkerboards [Whitted 80]; chrome balls [Whitted 80]; glass balls 
+[Whitted 80]; robot arms [Barr 82]; blue abstract things [Hanrahan 82]; 
+more glass balls [Watterberg 83]; mandrills [Watterberg 83]; more mandrills 
+[Sweeney 83]; green fractal hills [Kajiya 83]; more glass balls [SEDIC 83]; 
+aquatic blobby things [Kaw 83]; more chrome balls [Heckbert 83]; pool balls 
+[Porter 84]; more glass balls [Kajiya 86]. 
+   Unfortunately, nobody has ray traced any food.  So far, the most 
+realistic foods were Blinn's classic orange and strawberry images, but 
+these were created with a scanline algorithm[2].  The Dessert Realism 
+Project at Pixar is addressing this problem.  The article presents new 
+technology for ray tracing a restricted class of dessert foods, in 
+particular Jell-O brand gelatin.  We believe this method may have 
+application to other brands of gelatin and, perhaps, pudding as well. 
+   This article is divided into three parts: methods for modeling static 
+Jell-O, simulation of Jell-O motion using impressive mathematics, and 
+ray-Jell-O intersection calculations. 
+<P>
+Jell-O Shape: 
+   To model static Jell-O, we employ a new synthesis technique wherein 
+attributes are added one at a time using abstract object-oriented classes 
+we call ingredients.  Ingredient attributes are combined during a 
+pre-processing pass to accumulate the desired set of material properties 
+(consistency, taste, torsional strength, flame resistance, refractive 
+index, etc.).  We use the RLS orthogonal basis (raspberry, lime, and 
+strawberry, from which any type of Jell-O can be synthesized[9]). 
+   Ingredients are propagated through a large 3-D lattice using vectorized 
+pipeline SIMD parallel processing in a systolic array architecture that we 
+call the Jell-O Engine.  Furthermore, we can compute several lattice points 
+simultaneously.  Boundary conditions are imposed along free-form surfaces 
+to control the Jell-O shape, and the ingredients are mixed using relaxation 
+and annealing lattice algorithms until the matrix is chilled and ready-to-eat. 
+<P>
+Jell-O Dynamics: 
+   Previous researchers have observed that, under certain conditions, 
+Jell-O wiggles[8].  We have been able to simulate these unique and complex 
+Jell-O dynamics using spatial deformations[1] and other hairy mathematics. 
+&gt;From previous research with rendering systems, we have learned that a good 
+dose of gratuitous partial differential equations is needed to meet the 
+paper quota for impressive formulas. 
+   Therefore, we solve the Schrodinger wave equation for the Jell-O field 
+"J": 
+<P>
+		delta squared J +  2m  (E - V)J = 0. 
+				  --- 
+				   h 
+<P>
+   Transforming to a spherical coordinate system[7], 
+<P>
+	delta J = beta  theta J   beta  1 theta J   beta    1   theta J 
+		      x ------- +     y --------- +     z ------------- 
+			theta r         r theta r         r sin theta squared 
+<P>
+   Fuller has given a concise and lucid explanation of the derivation from 
+here: 
+<P>
+	The "begetted" eightness as the system-limit number of the 
+	nuclear uniqueness of self-regenerative symmetrical growth 
+	may well account for the fundamental octave of unique 
+	interpermutative integer effects identified as plus one, plus 
+	two, plus three, plus four, as the interpermuted effects of the 
+	integers one, two, three, and four, respectively; and as minus 
+	four, minus three, minus two, minus one, characterizing the  
+	integers five, six, seven, and eight, respectively[3]. 
+<P>
+   In other words, to a first approximation: 
+<P>
+			J = 0. 
+		  The Jell-O Equation 
+<P>
+Ray-Jello-O Intersection Calculation: 
+    The ray-Jell-O intersection calculations fortunately require the 
+solution of integral equations and the simulation of Markov chains[6], so 
+they cannot be computed efficiently.  In fact, we have proved that their 
+solution is linear-time reducible to the traveling-salesman problem, where 
+"n" is the number of Jell-O molecules, so we can be sure that ray tracing 
+Jell-O will be practical only on a supercomputer[5]. 
+<P>
+Implementation: 
+    A preliminary implementation has been completed on a VAX 11/780 running 
+the UNIX operating system.  To create a picture using the full Jell-O Engine 
+simulation, we estimate that 1 CPU eon of CRAY time and a lot of hard work 
+would be required.  We made several simplifying approximations, however, 
+since the article is due today.  As a first approximation, we have modeled a 
+gelatin cube governed by the first-order Jell-O equation with judiciously 
+selected surface properties; that is, color = (0,255,0).  The frontispiece 
+for this article was created with this model. 
+    Work is underway on a complete Jell-O Engine implementation in Lisp 
+flavors.  We will shortly begin computing a 100-by-100 image of a bowl of 
+lime Jell-O using a roomful of Amigas[4].  The picture should be ready in 
+time for SIGGRAPH with hours to spare. 
+<P>
+Conclusions: 
+     Jell-O goes well with a number of other familiar objects, including 
+mandrills, glass balls, and teapots.  The composition and animation 
+possibilities are limited only by your imagination (personal communication by 
+Lance Williams, 1980).  The Dessert Foods Division is generalizing the 
+methods described here to other brands of gelatin.  Future research areas 
+include the development of algorithms for ray tracing puddings and other 
+dessert foods.  Another outstanding problem is the suspension of fruit in 
+Jell-O, in particular, fresh pineapple and kiwifruit. 
+<P>
+	Jell-O is: 
+	 o  visually appealing 
+	 o  futuristic 
+	 o  hydrodynamically captivating 
+	 o  tasty 
+	 o  goes well with other objects 
+<P>
+Acknowledgements:  Thanks to Paul Haeberli for tipping back a few with me of 
+this research and to H.B. Siegel for key observations.  The SIGGRAPH 
+technical committee also deserves thanks for recognizing that "there's always 
+room for Jell-O." 
+<P>
+References: 
+	1.  Barr, A.H.  Ray tracing deformed surfaces. <I>SIGGRAPH</I> 86 Proc. 20, 
+	    4 (Aug. 1986), 287-296. 
+	2.  Blinn, J.F.  Computer display of curved surfaces.  Ph.D. thesis. 
+	    Computer Science Dept., Univ. of Utah, Salt Lake City, 1978. 
+	3.  Fuller, R.B.  _Synergetics_. MacMillan, New York, 1975, p. 125. 
+	4.  Graham, E.  Graphic scene simulations.  <I>Amiga World</I> (May-June 
+	    1987), 18-95. 
+	5.  Haeberli, P., and Heckbert, P.  A Jel-O calculus. _ACM Trans. 
+	    Graph_ (special issue on ray tracing moist surfaces). Submitted 
+	    1872.  To be published. 
+	6.  Kajiya, J.T.  The rendering equation. _SIGGRAPH 86 Proc. 20_, 4 
+	    (Aug. 1986), 143-150. 
+	7.  Plastock, R.A., and Kalley, G. _Schaum's Outline of Computer 
+	    Graphics_. McGraw-Hill, New York, 1986. 
+	8.  Sales, S. _The Soupy Sales Show_, 1966. 
+	9.  Weller, T. _Science Made Stupid_.  Houghton Mifflin, Boston, 
+	    Mass., 1985. 
+	10. Whitted, T.  An improved illumination model for shaded display. 
+	    _Commun. ACM 23_, 6 (June 1980), 343-349. 
+<P>
+Jell-O is a registered trademark of General Foods.  UNIX is a registered  
+trademark of AT&amp;T Bell Laboratories. 
+<P>
+Author's Present Address: Paul S. Heckbert, Dessert Foods Division, Pixar, 
+San Rafael, CA 94913-3719 
+<P>
+Permission to copy without fee all or part of this material is granted 
+provided that the copies are not made or distributed for direct commercial 
+advantage, the ACM copyright notice and the title of the publication and its 
+date appear, and notice is given that copying is by permission of the 
+Association for Computing Machinery.  To copy otherwise, or to republish, 
+requires a fee and/or specific permission. 
+<P>
+Communications of the ACM, February 1988, Volume 21, Number 2. 
+<P>
+</PRE>
+<CENTER><A HREF="12632.html"><IMG SRC="../../images/previous.gif" ALT=Previous WIDTH=76 HEIGHT=11 BORDER=0> |</A> RHF Joke Archives <A HREF="20424.6.html">| <IMG SRC="../../images/next.gif" ALT=Next WIDTH=76 HEIGHT=11 BORDER=0></A></CENTER>
+<!-- start "/include/rhf/joke-tmpl-footer.ofi" -->
+<BR>
+<CENTER>
+<A HREF="../../past.html">Best of Jokes</A> | 
+<A HREF="../../current.html">Current Jokes</a> | 
+<A HREF="../../index.html">RHF Home</A> |  
+<A HREF="../../search.html">Search</A>
+</FONT>
+<P>
+
+<!-- end "/include/rhf/joke-tmpl-footer.ofi" --></CENTER>
+<P align=center><script type="text/javascript"><!--
+google_ad_client = "pub-5397334057241462";
+google_alternate_ad_url = "../../../../www.templetons.com/brad/effread.gif";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_channel ="6875879912";
+//--></script>
+<script type="text/javascript"
+  src="../../../../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</p>
+
+
+</BODY>
+
+<!-- Mirrored from www.netfunny.com/rhf/jokes/88q3/20424.10.html by HTTrack Website Copier/3.x [XR&CO'2003], Tue, 16 Nov 2004 00:08:06 GMT -->
+</HTML>

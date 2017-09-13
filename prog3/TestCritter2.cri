@@ -1,0 +1,15 @@
+TestCritter2
+ifally 45 2
+infect
+infect 3
+go -1
+ifangle 0 270 r2
+go r1
+go r2
+go r3
+go r4
+go +1
+
+Tests if loadSpecies method reads the input file correctly with edge 
+cases like registers, relative jumps, ifangle, and infect with multiple
+numbers of parameters.

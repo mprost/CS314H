@@ -1,0 +1,285 @@
+<TITLE>A day in the life of a hacker (long) [rec.humor.funny]</TITLE>
+<style type="text/css" media="Screen">
+a {
+ text-decoration: none;
+ }
+a:hover {
+ color: darkred;
+ }
+</style>
+<HTML>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#0000EE" VLINK="#551A8B">
+
+<!-- start "/include/rhf/top.ofi" -->
+<MAP NAME="joke-header-map">
+<AREA SHAPE="rect" COORDS="103,52,194,71" HREF="../../best.html" ALT="Best of Jokes">
+<AREA SHAPE="rect" COORDS="205,52,299,71" HREF="../../current.html" ALT="Current Jokes">
+<AREA SHAPE="rect" COORDS="309,52,399,71" HREF="../../index.html" ALT="RHF Home">
+<AREA SHAPE="rect" COORDS="410,52,479,71" HREF="../../search.html" ALT="Search">
+<AREA SHAPE="rect" COORDS="489,52,560,71" HREF="../../sponsor.html" ALT="Sponsor RHF?">
+</MAP>
+<CENTER>
+
+<A HREF="../../images/joke-header.html"><IMG SRC="../../images/joke-header.gif" ALT="Fun Stuff &amp; Jokes" WIDTH="560" HEIGHT="74" ISMAP USEMAP="#joke-header-map" VSPACE="8" BORDER="0"></A><BR>
+</CENTER>
+<P>
+<!-- end "/include/rhf/top.ofi" -->
+<CENTER><A HREF="10766.18.html"><IMG SRC="../../images/previous.gif" ALT=Previous WIDTH=76 HEIGHT=11 BORDER=0> |</A> RHF Joke Archives <A HREF="12317.html">| <IMG SRC="../../images/next.gif" ALT=Next WIDTH=76 HEIGHT=11 BORDER=0></A></CENTER><CENTER>
+<H1><FONT FACE="helvetica, ariel" COLOR="#CE0000">A day in the life of a hacker (long)</FONT></H1>
+<ADDRESS><a href="mailto:koreth%ucscb.UCSC.EDU@ucscc.ucsc.edu">koreth%ucscb.UCSC.EDU@ucscc.ucsc.edu</a> (Steven Grimm)<BR>
+</ADDRESS>
+<FONT SIZE=-1>(smirk)<BR></FONT></FONT></CENTER><P>
+<HTML>
+<P>
+<PRE>[ If you don't like long amusing stories that aren't actually jokes, don't 
+  bother here. ] 
+<P>
+Script started on Fri Jun  3 15:46:22 1988 
+% mesg y 
+% biff y 
+% ftp ucbvax 
+Connected to ucbvax. 
+220 ucbvax.Berkeley.EDU FTP server (Version 4.145 Tue Dec 29 12:58:51 PST 1987) ready. 
+Name (ucbvax:koreth): anonymous 
+Password (ucbvax:anonymous):  
+331 Guest login ok, send ident as password. 
+230 Guest login ok, access restrictions apply. 
+ftp&gt; ls -CF 
+200 PORT command successful. 
+150 Opening data connection for /bin/ls (128.114.129.6,2721) (0 bytes). 
+bin/	etc/	pub/	ucs/ 
+226 Transfer complete. 
+13 bytes received in 0.39 seconds (0.032 Kbytes/s) 
+New mail for hacker@ucscb.UCSC.EDU has arrived: 
+---- 
+Date: Fri, 3 Jun 88 15:54:19 pdt 
+<ADDRESS><CENTER>pnkrokr (John Marsher)</CENTER></ADDRESS><BR>
+<P>
+To: hacker 
+<TITLE>Oh well... [rec.humor.funny]</TITLE>
+<H1 align=center>Oh well...</H1>
+<P>
+I hear Linda is going out with Tim now.  Too bad...  I know how hard you 
+were trying.  Cheer up, your luck has to change, right? 
+...more... 
+ftp&gt; cd ucs 
+200 CWD command okay. 
+ftp&gt; verbose 
+Verbose mode off. 
+ftp&gt; ls -F 
+README 
+private/ 
+ftp&gt; cd private 
+private: Permission denied 
+ftp&gt; get README 
+ftp&gt; ^Z 
+% cat README 
+<P>
+		    <B>*</B> Universal Control System 1.12 *** 
+<P>
+	If you are reading this file, you have access to UCS.  As you know, 
+the server has moved to inet address 37.3.3.2; telnet there as superuser 
+to enter command mode. 
+	Unauthorized use of the UCS system will result in severe penalties. 
+You are contracted to keep the existence of UCS a secret; information leaks 
+are dangerous and will be dealt with appropriately. 
+	Do not attempt to enter the "private" directory. 
+<P>
+						-The Director 
+<P>
+% telnet 37.3.3.2 
+Trying... 
+Connected to 37.3.3.2. 
+Escape character is '^]'. 
+<P>
+4.3 BSD UNIX (central.UCS.ORG) 
+<P>
+login: root 
+Last login: Fri Jun  3 00:55:16 from alternate 
+4.3 BSD UNIX Release 4.12 #69 (root@central) Tue May 24 13:25:44 PDT 1988 
+<P>
+/tmp is 99% full.  Destruction of contents will occur automatically. 
+<P>
+/tmp/1/183424/99671/18401/3 # ls 
+:  ./	../	Finder*	c1/	c2/	c3/	c4/	c5/	c6/	o/ 
+/tmp/1/183424/99671/18401/3 # Finder 
+Enter objectname.  Objects can be abstract to level 19 (RFC -965), including 
+but not limited to names (translated to English if necessary), locations 
+(longitude and latitude) and characteristics. 
+<P>
+object&gt; Mickey Mouse 
+Searching........................! 
+Found one reference. 
+<P>
+Name: Mickey Mouse 
+Class: Level 13 abstraction (fictional) 
+<ADDRESS><CENTER>(anthropomorphic, mouse, cartoon)</CENTER></ADDRESS><BR>
+<P>
+Location: none 
+Xref: Minnie Mouse, Walt Disney 
+Edit? y 
+<P>
+New name (RETURN=no change)? 
+New class (RETURN=no change, h=help)? h 
+<P>
+As of RFC -965, abstraction levels are defined as follows: 
+<P>
+ 1. Subdimensional interface array 
+ 2. Subnuclear (wave/particle) position/velocity pairs 
+ 3. Atomic position/velocity/type 
+ 4. Simple molecular position/velocity/type 
+ 5. Complex molecular position/velocity/type 
+ 6. Inanimate microscopic object definition 
+ 7. Animate (live/powered) microscopic obdef 
+ 8. Small (&lt;10m) inanimate obdef 
+ 9. Medium (10-50000m) inanimate obdef 
+10. Large (50000+ m) inanimate obdef 
+11. Small (&lt;10m) animate obdef 
+12. Large (10+ m) animate obdef 
+13. Concrete meme (fictional character, word definition, etc.) 
+14. Abstract meme (knowledge, idea) 
+15. Emotion 
+16. Faith 
+17. Societal influence 
+18. Magic 
+19. (classified) 
+<P>
+New class (RETURN=no change, h=help)? 12 
+Size (m)? 100 
+Location? Tokyo 
+Edit object definition? n 
+<P>
+Working..........done. 
+<P>
+New mail for hacker@ucscb.UCSC.EDU has arrived: 
+---- 
+Date: Fri, 3 Jun 88 16:04:06 pdt 
+<ADDRESS><CENTER>pnkrokr (John Marsher)</CENTER></ADDRESS><BR>
+<P>
+To: hacker 
+<TITLE>Shit! [rec.humor.funny]</TITLE>
+<H1 align=center>Shit!</H1>
+<P>
+They just announced on the radio that a giant Mickey Mouse appeared in the 
+middle of Tokyo and started smashing up the city!  That's a really weird 
+...more... 
+<P>
+Enter objectname.  Objects can be abstract to level 19 (RFC -965), including 
+but not limited to names (translated to English if necessary), locations 
+(longitude and latitude) and characteristics. 
+<P>
+object&gt; Linda Peterson 
+Searching........................................! 
+Found five references, ordering by distance from user. 
+<P>
+Name: Linda Peterson 
+Class: Level 11 abstraction (animate) 
+<ADDRESS><CENTER>(human, female)</CENTER></ADDRESS><BR>
+<P>
+Location: "University of California at Santa Cruz--room 103 Kerr" 
+Xref: Tim Fowler 
+Edit? y 
+<P>
+New name (RETURN=no change)? 
+New class (RETURN=no change, h=help)? 
+New location (RETURN=no change)? user's dorm room 
+New xref (RETURN=no change)? user 
+Edit object definition? y 
+Enter attribute to edit or 'q' to quit: libido 
+New value (5=cadaver, 100=maximum, current=48)? 150 
+Warning: value out of range, results unpredictable. 
+Enter attribute to edit or 'q' to quit: q 
+<P>
+Working................................................................done. 
+<P>
+/tmp/1/183424/99671/18401/3 # sleep 3600 
+/tmp/1/183424/99671/18401/3 #  
+Message from central.UCS.ORG!god on console at 17:48 ... 
+Thou art not an authorized user.  Heed thee my README. 
+EOF 
+Message from ucscb.UCSC.EDU!pnkrokr on ttyi3 at 19:50 ... 
+Hey!  You've been idle for two hours...  Check out this picture. 
+<P>
+                        ***** 
+                      **     ** 
+                    **    **   * 
+                   **  <B>*****</B>  * 
+                  **         **  * 
+                 **   <B>*</B>         * 
+                 *      __   __   * 
+                **  *  / . /.    * 
+               **   *  __/ __/   * 
+              **   *            .   * 
+              *    *  *          .  * 
+             **    * *           .  * 
+            **    ** *            *  * 
+            *      *      <B>**</B>    *  * 
+            *      *     <B>****</B>   *   * 
+            **     *     <B>****</B>   *   * 
+            <B>*</B>  <B>**</B>    <B>****</B>   *  * 
+             <B>****</B> **    <B>**</B>   *  * 
+              <B>*</B>    **     *    *** 
+                      **   **    * 
+                       ********** 
+                          * | * 
+                          * | * 
+                           *** 
+<P>
+Woof.  Oh well, have fun being idle. 
+EOF 
+Message from ucscb.UCSC.EDU!pnkrokr on ttyh9 at 01:05 ... 
+What's up?  You away from the terminal or something? 
+EOF 
+/tmp/1/183424/99671/18401/3 # logout 
+<P>
+God is dead. 
+	-- Nietzsche 
+Nietzsche is dead. 
+	-- God 
+Nietzsche is God. 
+	-- dead 
+<P>
+Connection closed by foreign host. 
+% cat &gt;/dev/null 
+Hey, this is John... Been breaking into root again, huh?  I logged you out 
+so nobody would notice.  What's this pillar of salt doing next to your 
+terminal?  You get weirder every day.  Damn, what did you do to your bed? 
+It looks like someone took a Cuisinart to it...  Guess you had some fun... :) 
+Speaking of which, you should be down in the stat lab.  Linda is down there 
+acting horny as hell.  She's begging all the geeks to go to bed with her. 
+Looks like you're missing out... 
+^C 
+%  
+script done on Sat Jun  4 12:18:36 1988 
+<P>
+</PRE>
+<CENTER><A HREF="10766.18.html"><IMG SRC="../../images/previous.gif" ALT=Previous WIDTH=76 HEIGHT=11 BORDER=0> |</A> RHF Joke Archives <A HREF="12317.html">| <IMG SRC="../../images/next.gif" ALT=Next WIDTH=76 HEIGHT=11 BORDER=0></A></CENTER>
+<!-- start "/include/rhf/joke-tmpl-footer.ofi" -->
+<BR>
+<CENTER>
+<A HREF="../../past.html">Best of Jokes</A> | 
+<A HREF="../../current.html">Current Jokes</a> | 
+<A HREF="../../index.html">RHF Home</A> |  
+<A HREF="../../search.html">Search</A>
+</FONT>
+<P>
+
+<!-- end "/include/rhf/joke-tmpl-footer.ofi" --></CENTER>
+<P align=center><script type="text/javascript"><!--
+google_ad_client = "pub-5397334057241462";
+google_alternate_ad_url = "../../../../www.templetons.com/brad/effread.gif";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_channel ="6875879912";
+//--></script>
+<script type="text/javascript"
+  src="../../../../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</p>
+
+
+</BODY>
+
+<!-- Mirrored from www.netfunny.com/rhf/jokes/88q2/10766.13.html by HTTrack Website Copier/3.x [XR&CO'2003], Tue, 16 Nov 2004 00:07:49 GMT -->
+</HTML>

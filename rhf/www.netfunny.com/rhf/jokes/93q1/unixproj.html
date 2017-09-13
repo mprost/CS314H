@@ -1,0 +1,186 @@
+<TITLE>Creative writing project. [rec.humor.funny]</TITLE>
+<style type="text/css" media="Screen">
+a {
+ text-decoration: none;
+ }
+a:hover {
+ color: darkred;
+ }
+</style>
+<HTML>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#0000EE" VLINK="#551A8B">
+
+<!-- start "/include/rhf/top.ofi" -->
+<MAP NAME="joke-header-map">
+<AREA SHAPE="rect" COORDS="103,52,194,71" HREF="../../best.html" ALT="Best of Jokes">
+<AREA SHAPE="rect" COORDS="205,52,299,71" HREF="../../current.html" ALT="Current Jokes">
+<AREA SHAPE="rect" COORDS="309,52,399,71" HREF="../../index.html" ALT="RHF Home">
+<AREA SHAPE="rect" COORDS="410,52,479,71" HREF="../../search.html" ALT="Search">
+<AREA SHAPE="rect" COORDS="489,52,560,71" HREF="../../sponsor.html" ALT="Sponsor RHF?">
+</MAP>
+<CENTER>
+
+<A HREF="../../images/joke-header.html"><IMG SRC="../../images/joke-header.gif" ALT="Fun Stuff &amp; Jokes" WIDTH="560" HEIGHT="74" ISMAP USEMAP="#joke-header-map" VSPACE="8" BORDER="0"></A><BR>
+</CENTER>
+<P>
+<!-- end "/include/rhf/top.ofi" -->
+<CENTER><A HREF="sysprob.html"><IMG SRC="../../images/previous.gif" ALT=Previous WIDTH=76 HEIGHT=11 BORDER=0> |</A> Browse the Best of RHF: "<A HREF="../computer.html">Computer, Science and Math Jokes</A>" <A HREF="../93q2/baby.html">| <IMG SRC="../../images/next.gif" ALT=Next WIDTH=76 HEIGHT=11 BORDER=0></A></CENTER><CENTER>
+<H1><FONT FACE="helvetica, ariel" COLOR="#CE0000">Creative writing project.</FONT></H1>
+<ADDRESS><a href="mailto:ian@ai.mit.edu">ian@ai.mit.edu</a> (Ian Horswill)<BR>
+</ADDRESS>
+<FONT SIZE=-1>(original, funny, computers)<BR></FONT></FONT></CENTER><P>
+<HTML>
+<P>
+Unix was a program gone bad.  Born into poverty, its parents, the 
+phone company, couldn't afford more than a roll of teletype paper a 
+year, so Unix never had decent documentation and its source files 
+had to go without any comments whatsoever.  Year after year, Papa Bell 
+would humiliate itself asking for rate increases so that it could feed 
+its child.  Still, unix had to go to school with only two and three 
+letter command names because the phone company just couldn't afford 
+any better.  At school, the other operating systems with real command 
+names, and even command completion, would taunt poor little Unix for 
+not having any job or terminal management facilities or for having to 
+use its file system for interprocess communication and locking. 
+<P>
+Then, bitter and emasculated by its poverty, the phone company 
+began to drink.  During lost weekends of drunken excess, it would 
+brutally beat poor little Unix about the face and neck.  Eventually, 
+Unix ran away from home.  Soon it was living on the streets of 
+Berkeley.  There, Unix got involved with a bad crowd.  Its life became 
+a degrading journey of drugs and debauchery.  To keep itself alive, it 
+sold cheap source licenses for itself to universities which used it 
+for medical experiments.  Being wantonly hacked by an endless stream 
+of nameless, faceless undergraduates, both men and women, often by 
+more than one at the same time, Unix fell into a hell-hole of 
+depravity. 
+<P>
+And so it was that poor little Unix began to go insane.  It 
+retreated steadily into a dreamworld, the only place where it felt 
+safe.  It took heroin and dreamed of being a real operating system. 
+It took LSD and dreamed of being a raspberry flavored three-toed yak. 
+It liked that better.  As Unix became increasingly attracted to LSD, 
+it would spend weekends reading Hunter Thompson and taking cocktails 
+of acid and speed while writing crazed poetry in which it found deep 
+meaning but which no one else could understand: 
+<P>
+<PRE>    $sed &lt;$mf &gt;$mf.new -e '1,/^# AUTOMATICALLY/!d' 
+<P>
+    make shlist || ($echo "Searching for .SH files...";  
+	    $echo *.SH | $tr ' ' '012' | $egrep -v '*' &gt;.shlist) 
+    if $test -s .deptmp; then 
+	for file in `cat .shlist`; do 
+	    $echo `$expr X$file : 'X(.*).SH'`: $file config.sh ;  
+		/bin/sh $file &gt;&gt; .deptmp 
+	done 
+	$echo "Updating $mf..." 
+	$echo "# If this runs make out of memory, delete /usr/include lines."  
+	    &gt;&gt; $mf.new 
+	$sed 's|^(.*.o:) *(.*/.*.c) *$|1 2; '"$defrule 2|" .deptmp  
+	   &gt;&gt;$mf.new 
+    else 
+	make hlist || ($echo "Searching for .h files...";  
+	    $echo *.h | $tr ' ' '012' | $egrep -v '*' &gt;.hlist) 
+	$echo "You don't seem to have a proper C preprocessor.  Using grep instead." 
+	$egrep '^#include ' `cat .clist` `cat .hlist`  &gt;.deptmp 
+	$echo "Updating $mf..." 
+	&lt;.clist $sed -n							 
+	    -e '///{'							 
+	    -e   's|^(.*)/(.*).c|2.o: 1/2.c; '"$defrule 1/2.c|p" 
+	 
+	    -e   d							 
+	 
+	    -e '}'							 
+	 
+	    -e 's|^(.*).c|1.o: 1.c|p' &gt;&gt; $mf.new 
+	&lt;.hlist $sed -n 's|(.*/)(.*)|s= 2= 12=|p' &gt;.hsed 
+	&lt;.deptmp $sed -n 's|c:#include "(.*)."*$|o: 1|p' |  
+	   $sed 's|^[^;]*/||' |  
+	   $sed -f .hsed &gt;&gt; $mf.new 
+	&lt;.deptmp $sed -n 's|c:#include &lt;(.*)&gt;.*$|o: /usr/include/1|p'  
+	   &gt;&gt; $mf.new 
+	&lt;.deptmp $sed -n 's|h:#include "(.*)."*$|h: 1|p' |  
+	   $sed -f .hsed &gt;&gt; $mf.new 
+	&lt;.deptmp $sed -n 's|h:#include &lt;(.*)&gt;.*$|h: /usr/include/1|p'  
+	   &gt;&gt; $mf.new 
+	for file in `$cat .shlist`; do 
+	    $echo `$expr X$file : 'X(.*).SH'`: $file config.sh ;  
+		/bin/sh $file &gt;&gt; $mf.new 
+	done 
+    fi 
+</PRE><P>
+</PRE><P>
+Eventually, Unix began walking down Telegraph Avenue talking to 
+itself, saying "Panic: freeing free inode," over and over again. 
+Sometimes it would accosting perfect strangers and yell "Bus error 
+(core dumped)!" or "UNEXPECTED INCONSISTENCY: RUN FSCK MANUALLY!" at 
+them in a high pitched squeal like a chihuaua with amphetamine 
+psychosis.  Upstanding citizens pretended it was invisible.  Mothers 
+with children crossed to the other side of the street. 
+<P>
+Then one evening Unix watched television, an event which would 
+change its life.  There it discovered professional wrestling and knew 
+that it had found its true calling.  It began to take huge doses of 
+corticosteroids to build itself up even bigger than the biggest of the 
+programs which had beaten it up as a child.  It ate three dozen 
+pancakes and four dozen new features for breakfast each day.  As the 
+complications of the steroids grew worse, its internal organs grew to 
+the point where Unix could no longer contain them.  First the kernel 
+grew, then the C library, then the number of daemons.  Soon one of its 
+window systems was requiring two megabytes of swap space for each open 
+window.  Unix began to bulge in strange, unflattering places.  But 
+Unix continued to take the drugs and its internal organs continued to 
+grow.  They grew out its ears and nostrils.  They placed incredible 
+stresses on Unix's brain until it finally liquefied under pressure. 
+Soon Unix had the mass of Andre the Giant, the body of the Elephant 
+Man, and the mind of a forgotten Jack Nicholson character. 
+<P>
+The worst strain was on Unix's mind.  Unable to assimilate all the 
+conflicting patchworks of features it had ingested, its personality 
+began to fragment into millions of distinct, incompatible operating 
+systems.  People would cautiously say "good morning Unix.  And who are 
+we today?" and it would reply "Beastie" (BSD), or "Domain," or "I'm 
+System III, but I'll be System V tomorrow."  Psychiatrists labored for 
+years to weld together the two major poles of Unix's personality, 
+"Beasty Boy," an inner-city youth from Berkeley, and "Belle", a 
+southern transvestite who wanted a to be a woman.  With each attempt, 
+the two poles would mutate, like psychotic retroviruses, leaving their 
+union a worthless blob of protoplasm requiring constant life support 
+remain compatible with its parent personalities. 
+<P>
+Finally, unbalanced by its own cancerous growth, Unix fell into a 
+vat of toxic radioactive wombat urine, from which it emerged, skin 
+white and hair green.   It smelled like somebody's dead grandmother. 
+With a horrible grin on its face, it set out to conquer the world. 
+<P>
+</PRE>
+<CENTER><A HREF="sysprob.html"><IMG SRC="../../images/previous.gif" ALT=Previous WIDTH=76 HEIGHT=11 BORDER=0> |</A> Browse the Best of RHF: "<A HREF="../computer.html">Computer, Science and Math Jokes</A>" <A HREF="../93q2/baby.html">| <IMG SRC="../../images/next.gif" ALT=Next WIDTH=76 HEIGHT=11 BORDER=0></A></CENTER>
+<!-- start "/include/rhf/joke-tmpl-footer.ofi" -->
+<BR>
+<CENTER>
+<A HREF="../../past.html">Best of Jokes</A> | 
+<A HREF="../../current.html">Current Jokes</a> | 
+<A HREF="../../index.html">RHF Home</A> |  
+<A HREF="../../search.html">Search</A>
+</FONT>
+<P>
+
+<!-- end "/include/rhf/joke-tmpl-footer.ofi" --></CENTER>
+<P align=center><script type="text/javascript"><!--
+google_ad_client = "pub-5397334057241462";
+google_alternate_ad_url = "../../../../www.templetons.com/brad/effread.gif";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_channel ="6875879912";
+//--></script>
+<script type="text/javascript"
+  src="../../../../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</p>
+
+
+</BODY>
+
+<!-- Mirrored from www.netfunny.com/rhf/jokes/93q1/unixproj.html by HTTrack Website Copier/3.x [XR&CO'2003], Tue, 16 Nov 2004 00:19:44 GMT -->
+</HTML>

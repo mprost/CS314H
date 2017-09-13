@@ -1,0 +1,7 @@
+TestCritter3
+hop
+right
+left
+go -1
+
+This shows that the negative relative jumps work as intended.

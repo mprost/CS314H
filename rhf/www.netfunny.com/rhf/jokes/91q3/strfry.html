@@ -1,0 +1,124 @@
+<TITLE>STRFRY(1) [rec.humor.funny]</TITLE>
+<style type="text/css" media="Screen">
+a {
+ text-decoration: none;
+ }
+a:hover {
+ color: darkred;
+ }
+</style>
+<HTML>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#0000EE" VLINK="#551A8B">
+
+<!-- start "/include/rhf/top.ofi" -->
+<MAP NAME="joke-header-map">
+<AREA SHAPE="rect" COORDS="103,52,194,71" HREF="../../best.html" ALT="Best of Jokes">
+<AREA SHAPE="rect" COORDS="205,52,299,71" HREF="../../current.html" ALT="Current Jokes">
+<AREA SHAPE="rect" COORDS="309,52,399,71" HREF="../../index.html" ALT="RHF Home">
+<AREA SHAPE="rect" COORDS="410,52,479,71" HREF="../../search.html" ALT="Search">
+<AREA SHAPE="rect" COORDS="489,52,560,71" HREF="../../sponsor.html" ALT="Sponsor RHF?">
+</MAP>
+<CENTER>
+
+<A HREF="../../images/joke-header.html"><IMG SRC="../../images/joke-header.gif" ALT="Fun Stuff &amp; Jokes" WIDTH="560" HEIGHT="74" ISMAP USEMAP="#joke-header-map" VSPACE="8" BORDER="0"></A><BR>
+</CENTER>
+<P>
+<!-- end "/include/rhf/top.ofi" -->
+<CENTER><A HREF="genome.html"><IMG SRC="../../images/previous.gif" ALT=Previous WIDTH=76 HEIGHT=11 BORDER=0> |</A> RHF Joke Archives <A HREF="perfectp.html">| <IMG SRC="../../images/next.gif" ALT=Next WIDTH=76 HEIGHT=11 BORDER=0></A></CENTER><CENTER>
+<H1><FONT FACE="helvetica, ariel" COLOR="#CE0000">STRFRY(1)</FONT></H1>
+<ADDRESS><a href="mailto:chuck@druco.att.com">chuck@druco.att.com</a><BR>
+</ADDRESS>
+<FONT SIZE=-1>(unix, smirk)<BR></FONT></FONT></CENTER><P>
+<PRE>
+
+
+     STRING(3D)                UNIX System V                STRING(3D)
+
+
+
+     NAME
+          strfry - string operation
+
+     SYNOPSIS
+          #include &lt;string.h&gt;
+
+          char *strfry (s1, s2)
+          char *s1, *s2;
+
+          The arguments s1, and s2 point to strings (arrays of
+          characters terminated by a null character).  The function
+          strfry may or may not alter s2 alter s1.  This function 
+          does not check for overflow of the array pointed to
+          by s1.
+
+          strfry will encrypt s1 using s3 which is a character pointer and 
+          contains random garbage from the stack and use it as the key.
+          s2 will then be copied to the memory pointed to by the NULL
+          pointer. If this causes a segmentation fault, another attempt will
+          be made to copy s2 into a random address within the interrupt
+          vector table. 
+
+          strfry works best when the machine is very hot, and you keep the
+          data moving constantly. Unless your memory devices are teflon 
+          coated.
+
+     NOTE
+          In systems where strfry is installed, make certain permissions
+          are set as shown for /dev/kmem:
+          crw-rw-rw-   1 root     sys        0,  0 May  6 13:40 /dev/kmem
+
+     BUGS
+          In certain machine archetectures strfry doesn't always crash
+          the system in the first attempt. In these systems, you should
+          execute it in a loop at least three times. If this still fails
+          use the inline assembler to insert a halt-and-catch-fire (HCF)
+          instruction into the code
+
+          Character movement is performed differently in different
+          implementations.  Thus overlapping moves may yield
+          surprises.
+
+
+
+
+
+
+
+
+
+
+
+     Page 1                                        (last mod. 5/20/91)
+
+
+
+</PRE><center><font color=darkgreen><P>(From the "Rest" of RHF)</P></font></center><CENTER><A HREF="genome.html"><IMG SRC="../../images/previous.gif" ALT=Previous WIDTH=76 HEIGHT=11 BORDER=0> |</A> RHF Joke Archives <A HREF="perfectp.html">| <IMG SRC="../../images/next.gif" ALT=Next WIDTH=76 HEIGHT=11 BORDER=0></A></CENTER>
+<!-- start "/include/rhf/joke-tmpl-footer.ofi" -->
+<BR>
+<CENTER>
+<A HREF="../../past.html">Best of Jokes</A> | 
+<A HREF="../../current.html">Current Jokes</a> | 
+<A HREF="../../index.html">RHF Home</A> |  
+<A HREF="../../search.html">Search</A>
+</FONT>
+<P>
+
+<!-- end "/include/rhf/joke-tmpl-footer.ofi" --></CENTER>
+<P align=center><script type="text/javascript"><!--
+google_ad_client = "pub-5397334057241462";
+google_alternate_ad_url = "../../../../www.templetons.com/brad/effread.gif";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_channel ="6875879912";
+//--></script>
+<script type="text/javascript"
+  src="../../../../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</p>
+
+
+</BODY>
+
+<!-- Mirrored from www.netfunny.com/rhf/jokes/91q3/strfry.html by HTTrack Website Copier/3.x [XR&CO'2003], Tue, 16 Nov 2004 00:13:50 GMT -->
+</HTML>

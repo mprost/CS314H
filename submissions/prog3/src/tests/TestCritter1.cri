@@ -1,0 +1,9 @@
+TestCritter1
+ifenemy 0 4
+ifally 0 5
+ifangle 0 0 4
+hop
+left
+go 1
+
+Tests if loadSpecies method reads the input file correctly.

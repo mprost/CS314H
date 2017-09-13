@@ -1,0 +1,7 @@
+InvalidCommandTest
+ifenemy 0 2
+ifally 0 3
+eaat
+go 1
+
+Checks if error statement is printed when an invalid command is input.

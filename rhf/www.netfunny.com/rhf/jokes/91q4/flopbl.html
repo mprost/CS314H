@@ -1,0 +1,119 @@
+<TITLE>Xmas.c [rec.humor.funny]</TITLE>
+<style type="text/css" media="Screen">
+a {
+ text-decoration: none;
+ }
+a:hover {
+ color: darkred;
+ }
+</style>
+<HTML>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#0000EE" VLINK="#551A8B">
+
+<!-- start "/include/rhf/top.ofi" -->
+<MAP NAME="joke-header-map">
+<AREA SHAPE="rect" COORDS="103,52,194,71" HREF="../../best.html" ALT="Best of Jokes">
+<AREA SHAPE="rect" COORDS="205,52,299,71" HREF="../../current.html" ALT="Current Jokes">
+<AREA SHAPE="rect" COORDS="309,52,399,71" HREF="../../index.html" ALT="RHF Home">
+<AREA SHAPE="rect" COORDS="410,52,479,71" HREF="../../search.html" ALT="Search">
+<AREA SHAPE="rect" COORDS="489,52,560,71" HREF="../../sponsor.html" ALT="Sponsor RHF?">
+</MAP>
+<CENTER>
+
+<A HREF="../../images/joke-header.html"><IMG SRC="../../images/joke-header.gif" ALT="Fun Stuff &amp; Jokes" WIDTH="560" HEIGHT="74" ISMAP USEMAP="#joke-header-map" VSPACE="8" BORDER="0"></A><BR>
+</CENTER>
+<P>
+<!-- end "/include/rhf/top.ofi" -->
+<CENTER><A HREF="fixtruck.html"><IMG SRC="../../images/previous.gif" ALT=Previous WIDTH=76 HEIGHT=11 BORDER=0> |</A> RHF Joke Archives <A HREF="forrnds.html">| <IMG SRC="../../images/next.gif" ALT=Next WIDTH=76 HEIGHT=11 BORDER=0></A></CENTER><CENTER>
+<H1><FONT FACE="helvetica, ariel" COLOR="#CE0000">Xmas.c</FONT></H1>
+<ADDRESS><a href="mailto:evan@telly.on.ca">evan@telly.on.ca</a> (Evan Leibovitch)<BR>
+</ADDRESS>
+<FONT SIZE=-1>(topical, computer, smirk)<BR></FONT></FONT></CENTER><P>
+<PRE>/* 
+
+AN ELECTRONIC CHRISTMAS/CHANUKAH CARD TO ALL
+
+Lyrics:		Evan Leibovitch &lt;evan@telly.on.ca&gt;
+Code:		Beverly Erlebacher &lt;erlebach@cs.toronto.edu&gt;
+Written:	December 1989
+
+This code is in the public domain.
+
+*/
+
+#include &lt;stdio.h&gt;
+
+#define	DEFAULT_HOLIDAY	"CHRISTMAS/CHANUKAH"
+#define DAYS_OF_NEGLECT 12
+
+char heading[] = "AN ELECTRONIC %s CARD TO ALL\n\n\
+    Lyrics: Evan Leibovitch &lt;evan@telly.on.ca&gt;\n\
+    Code: Beverly Erlebacher &lt;erlebach@cs.toronto.edu&gt;\n\n\
+    Dedicated to Dave Mason, Chris Siebenmann, and anyone who's left\n\
+    their computers alone just long enough for them to self-destruct:\n\n\
+    (Sung to the tune of something or other...)\n\n";
+
+char * cardinal[] = {"And a", "Two", "Three", "Four", "Five",
+    "Six", "Seven", "Eight", "Nine", "Ten", "Eleven", "Twelve"};
+
+char * ordinal[] = {"first", "second", "third", "fourth", "fifth", "sixth",
+    "seventh", "eighth", "ninth", "tenth", "eleventh", "twelfth", "thirteenth"};
+
+char * item[] = { "burnt-out V.D.T.", "faulty tapes;",
+    "heads crashed;", "bad blocks;", "core dumps;", "bad controllers; ",
+    "blown partitions;", "gettys dying;", "floppies frying;",
+    "ports a-jamming;", "chips a-smoking;", "boards a-blowing;" };
+
+char daystr[] = "\nOn the %s day I left it, my Unix gave to me:\n";
+
+char finale[] = 
+   "\nOn the %s day I started adapting my Nintendo for the VME bus.\n";
+
+main(argc, argv)
+int  argc;
+char *argv[];
+
+{
+	int i, j;
+
+	printf(heading, argc &gt; 1 ? argv[1] : DEFAULT_HOLIDAY);
+	for (i = 0; i &lt; DAYS_OF_NEGLECT; i++) {
+		printf(daystr, ordinal[i]);
+		if (i == 0)
+			printf("\tA %s\n", item[i]);
+		else for (j = i; j &gt;= 0; j--)
+			printf("\t%s %s\n", cardinal[j], item[j]);
+	}
+	printf(finale, ordinal[DAYS_OF_NEGLECT]);
+	exit(0);
+}
+</PRE><center><font color=darkgreen><P>(From the "Rest" of RHF)</P></font></center><CENTER><A HREF="fixtruck.html"><IMG SRC="../../images/previous.gif" ALT=Previous WIDTH=76 HEIGHT=11 BORDER=0> |</A> RHF Joke Archives <A HREF="forrnds.html">| <IMG SRC="../../images/next.gif" ALT=Next WIDTH=76 HEIGHT=11 BORDER=0></A></CENTER>
+<!-- start "/include/rhf/joke-tmpl-footer.ofi" -->
+<BR>
+<CENTER>
+<A HREF="../../past.html">Best of Jokes</A> | 
+<A HREF="../../current.html">Current Jokes</a> | 
+<A HREF="../../index.html">RHF Home</A> |  
+<A HREF="../../search.html">Search</A>
+</FONT>
+<P>
+
+<!-- end "/include/rhf/joke-tmpl-footer.ofi" --></CENTER>
+<P align=center><script type="text/javascript"><!--
+google_ad_client = "pub-5397334057241462";
+google_alternate_ad_url = "../../../../www.templetons.com/brad/effread.gif";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_channel ="6875879912";
+//--></script>
+<script type="text/javascript"
+  src="../../../../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</p>
+
+
+</BODY>
+
+<!-- Mirrored from www.netfunny.com/rhf/jokes/91q4/flopbl.html by HTTrack Website Copier/3.x [XR&CO'2003], Tue, 16 Nov 2004 00:14:15 GMT -->
+</HTML>

@@ -1,0 +1,10 @@
+ValidBearingTest1
+ifenemy 0 4
+ifally -12 5
+ifangle 0 0 4
+hop
+left
+go 1
+
+Checks if error statement is printed when conditional methods with one
+bearing parameter use an invalid bearing.

@@ -1,0 +1,180 @@
+<TITLE>She's a witch! Burn her! Proof by Resolution Theorem Proving [rec.humor.funny]</TITLE>
+<style type="text/css" media="Screen">
+a {
+ text-decoration: none;
+ }
+a:hover {
+ color: darkred;
+ }
+</style>
+<HTML>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#0000EE" VLINK="#551A8B">
+
+<!-- start "/include/rhf/top.ofi" -->
+<MAP NAME="joke-header-map">
+<AREA SHAPE="rect" COORDS="103,52,194,71" HREF="../../best.html" ALT="Best of Jokes">
+<AREA SHAPE="rect" COORDS="205,52,299,71" HREF="../../current.html" ALT="Current Jokes">
+<AREA SHAPE="rect" COORDS="309,52,399,71" HREF="../../index.html" ALT="RHF Home">
+<AREA SHAPE="rect" COORDS="410,52,479,71" HREF="../../search.html" ALT="Search">
+<AREA SHAPE="rect" COORDS="489,52,560,71" HREF="../../sponsor.html" ALT="Sponsor RHF?">
+</MAP>
+<CENTER>
+
+<A HREF="../../images/joke-header.html"><IMG SRC="../../images/joke-header.gif" ALT="Fun Stuff &amp; Jokes" WIDTH="560" HEIGHT="74" ISMAP USEMAP="#joke-header-map" VSPACE="8" BORDER="0"></A><BR>
+</CENTER>
+<P>
+<!-- end "/include/rhf/top.ofi" -->
+<CENTER><A HREF="366.html"><IMG SRC="../../images/previous.gif" ALT=Previous WIDTH=76 HEIGHT=11 BORDER=0> |</A> RHF Joke Archives <A HREF="sovtoi.html">| <IMG SRC="../../images/next.gif" ALT=Next WIDTH=76 HEIGHT=11 BORDER=0></A></CENTER><CENTER>
+<H1><FONT FACE="helvetica, ariel" COLOR="#CE0000">She's a witch! Burn her! Proof by Resolution Theorem Proving</FONT></H1>
+<ADDRESS><a href="mailto:ji@close.cs.columbia.edu">ji@close.cs.columbia.edu</a> (John Ioannidis)<BR>
+Columbia University Department of Computer Science<BR>
+</ADDRESS>
+<FONT SIZE=-1>(original, maybe, science)<BR></FONT></FONT></CENTER><P>
+<PRE>My officemate is the TA for Artificial Intelligence, and today he was
+explaining Resolution Theorem Proving using Predicate Calculus to a
+bunch of students. They were looking for an example, so I suggested
+they use Sir Bedevere's proof that the girl the villagers were trying
+to burn was, indeed, a witch (in "Monty Python and the Holy Grail").
+They thought it would take too long, but I worked out the proof anyway.
+
+Without repeating the dialog (which is a copyrighted work, but at
+least one person at your site should be able to recite it by heart!),
+here are Sir Bedevere's arguments, expressed in Predicate Calculus
+(only those pertinent to the proof are included. Let us not worry
+about the truth of some of these implications).
+
+[1] 	BURNS(x) /\ WOMAN(x)	 	=&gt;	WITCH(x)
+[2]	WOMAN(GIRL)
+[3]	\forall x, ISMADEOFWOOD(x)	=&gt;	BURNS(x)
+[4]	\forall x, FLOATS(x) 		=&gt;	ISMADEOFWOOD(x)
+[5]	FLOATS(DUCK)
+[6]	\forall x,y FLOATS(x) /\ SAMEWEIGHT(x,y) =&gt;	FLOATS(y)
+and, by experiment
+[7]	SAMEWEIGHT(DUCK,GIRL)
+
+Now, remember how we do resolution; we refute the statement we try to
+prove and try to resolve the statemets to nil (false). The way we do
+that is by putting the statements in Conjunctive Normal Form (a list
+of statements whose terms are connected with logical or's), and then
+using pairs of statements where a term appears in both affirmative and
+negated form, and resolving. For more information on RTP, consult any
+AI textbook.
+
+First, we reduce [1] through [7] to Conjunctive Normal Form
+
+	[1] yields
+	~(BURNS(x) /\ WOMAN(x)) \/ WITCH(x)
+	which yields
+
+[9]	~BURNS(x) \/ ~WOMAN(x) \/ WITCH(x)
+
+	[3] yields
+
+[10]	~ISMADEOFWOOD(x) \/ BURNS(x)
+
+	[4] yields
+
+[11]	~FLOATS(x) \/ ISMADEOFWOOD(x)
+
+	[6] yields
+	~(FLOATS(x) /\ SAMEWEIGHT(x,y)) \/ FLOATS(y)
+	which yields
+
+[12]    ~FLOATS(x) \/ ~SAMEWEIGHT(x, y) \/ FLOATS(y)
+
+	Now we are trying to prove WITCH(GIRL), so we add 
+
+[13]	~WITCH(GIRL)
+
+	and we'll try to resolve these statements to a NIL.
+
+------------
+
+Substituting DUCK and GIRL for x and y in [12] we get:
+
+
+[14]	~FLOATS(DUCK) \/ ~SAMEWEIGHT(DUCK, GIRL) \/ FLOATS(GIRL)
+
+which we resolve with [7] to get 
+
+[15]	~FLOATS(DUCK) \/ FLOATS(GIRL)
+
+which we resolve with [5] to get
+
+[16]	FLOATS(GIRL)
+
+We substitute GIRL for x in [11] and we get
+
+[17]	~FLOATS(GIRL) \/ ISMADEOFWOOD(GIRL)
+
+which we resolve with [16] to get
+
+[18]	ISMADEOFWOOD(GIRL)
+
+We substitute GIRL for x in [10] to get
+
+[19]	~ISMADEOFWOOD(GIRL) \/ BURNS(GIRL)
+
+which we resolve with [18] to get
+
+[20]	BURNS(GIRL).
+
+Now we substitute GIRL for x in [9] to get
+
+[21]	~BURNS(GIRL) \/ ~WOMAN(GIRL) \/ WITCH(GIRL)
+
+which we resolve with [20] to get
+
+[22]    ~WOMAN(GIRL) \/ WITCH(GIRL)
+
+which we resolve with [2] to get 
+
+[23]	WITCH(GIRL)
+
+which we resolve with [13]
+
+to get 
+	NIL,
+
+which proves, once and for all, that the villagers were right and the
+girl was indeed a witch! BURN HER!
+
+/ji
+
+In-Real-Life: John "Heldenprogrammer" Ioannidis
+E-Mail-To: ji@cs.columbia.edu
+V-Mail-To: +1 212 854 8120
+P-Mail-To: 450 Computer Science \n Columbia University \n New York, NY 10027
+
+
+
+</PRE><center><font color=darkgreen><P>(From the "Rest" of RHF)</P></font></center><CENTER><A HREF="366.html"><IMG SRC="../../images/previous.gif" ALT=Previous WIDTH=76 HEIGHT=11 BORDER=0> |</A> RHF Joke Archives <A HREF="sovtoi.html">| <IMG SRC="../../images/next.gif" ALT=Next WIDTH=76 HEIGHT=11 BORDER=0></A></CENTER>
+<!-- start "/include/rhf/joke-tmpl-footer.ofi" -->
+<BR>
+<CENTER>
+<A HREF="../../past.html">Best of Jokes</A> | 
+<A HREF="../../current.html">Current Jokes</a> | 
+<A HREF="../../index.html">RHF Home</A> |  
+<A HREF="../../search.html">Search</A>
+</FONT>
+<P>
+
+<!-- end "/include/rhf/joke-tmpl-footer.ofi" --></CENTER>
+<P align=center><script type="text/javascript"><!--
+google_ad_client = "pub-5397334057241462";
+google_alternate_ad_url = "../../../../www.templetons.com/brad/effread.gif";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_channel ="6875879912";
+//--></script>
+<script type="text/javascript"
+  src="../../../../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</p>
+
+
+</BODY>
+
+<!-- Mirrored from www.netfunny.com/rhf/jokes/90q4/burnher.html by HTTrack Website Copier/3.x [XR&CO'2003], Tue, 16 Nov 2004 00:11:37 GMT -->
+</HTML>

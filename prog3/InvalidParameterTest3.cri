@@ -1,0 +1,10 @@
+InvalidParameterTest3
+ifenemy 0 4
+ifally 0 r11
+ifangle 0 0 4
+hop
+left
+go 1
+
+Checks if error statement is printed when parameters are invalid 
+registers.
